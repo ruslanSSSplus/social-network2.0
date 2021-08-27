@@ -1,0 +1,9 @@
+.set {
+  grid-area: s;
+  background-color: rgb(206, 62, 158);
+}
+.item{
+  color: rgb(41, 241, 248);
+  margin: 20px;
+}
+

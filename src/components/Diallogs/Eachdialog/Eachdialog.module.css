@@ -1,0 +1,27 @@
+
+
+
+.dialog
+{
+    margin: 10px;
+    height: 30px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    padding: 5px;
+
+}
+.dialog:hover
+{
+    border-radius: 5px;
+    background-color: rgb(200, 214, 230);
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+
+.dialog .activeLink
+{
+    color: red;
+}
+.dialog a{
+    text-decoration: none;
+}

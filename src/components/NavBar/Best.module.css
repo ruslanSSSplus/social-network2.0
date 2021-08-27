@@ -1,0 +1,20 @@
+
+.item
+{
+    color: rgb(198, 150, 150);
+    /*color: antiquewhite;*/
+    margin-bottom: 10px;
+
+}
+.item img {
+    padding-left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    vertical-align: middle;
+}
+.name{
+    font-size: 12px;
+
+
+}

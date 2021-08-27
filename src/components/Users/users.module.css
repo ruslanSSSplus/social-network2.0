@@ -1,0 +1,82 @@
+.userPhoto {
+    grid-area: a;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: auto;
+}
+.userInfo
+{
+
+    display: grid;
+    width: 1100px;
+    height: 80px;
+    margin: 5px;
+
+
+    grid-template-areas:
+  'a u ';
+    grid-template-columns: 60px 1fr ;
+    grid-gap: 15px;
+}
+.city
+{
+    grid-area: g;
+}
+.country
+{
+    grid-area: c;
+}
+.fullname
+{
+    margin-left: 20px;
+    grid-area: n;
+}
+.status
+{
+    margin-left: 20px;
+    grid-area: s;
+}
+.userInfoShort
+{
+    grid-area: u;
+}
+.userInfoShort
+{   margin-top: 5px;
+    padding-top: 5px;
+    border: #333333 1px solid;
+    border-radius: 20px;
+    display: grid;
+    width: 1020px;
+    height: 70px;
+
+
+    grid-template-areas:
+    'n c '
+    's g ';
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-gap: 15px;
+}
+.buttons
+{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 15px;
+}
+.newUsers
+{
+    margin: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.selectedPage
+{
+    font-weight: bold;
+}
+.page
+{
+    cursor: pointer;
+}
