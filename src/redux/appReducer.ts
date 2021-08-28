@@ -2,13 +2,16 @@ import {getAuthThunk} from "./authReducer";
 
 const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS';
 
+export type InitialStateType ={
+    initialized: boolean
+}
 
-let initialState = {
+let initialState: InitialStateType = {
   initialized: false
 }
 
 
-const appReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action: any): InitialStateType => {
 
     switch (action.type) {
         case INITIALIZED_SUCCESS:
@@ -24,7 +27,11 @@ const appReducer = (state = initialState, action) => {
     }
 }
 
-export const initializedSuccess = () => ({
+type initializedSuccessActionType = {
+    type: typeof INITIALIZED_SUCCESS
+}
+
+export const initializedSuccess = ():initializedSuccessActionType => ({
     type: INITIALIZED_SUCCESS,
 })
 
@@ -32,7 +39,7 @@ export const initializedSuccess = () => ({
 
 
 export const initialiseApp = () =>{
-    return (dispatch) =>{
+    return (dispatch: any) =>{
       let promise =  dispatch(getAuthThunk())
         promise.then( ()=> {
             dispatch(initializedSuccess())

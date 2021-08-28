@@ -15,7 +15,7 @@ let initialState = {
 
         {
             id: 1,
-            post: 'First Friend GEna DaUn',
+            post: 'First Friend GEna',
             user: 'Гена',
             time: 'сегодня в 11 утра',
             picture: 'https://sun9-35.userapi.com/impf/c846522/v846522118/18d9eb/E5pvZnPh9hU.jpg?size=1920x1080&quality=96&sign=028f51047f18db27b0be9c3f5f266980&type=album',
