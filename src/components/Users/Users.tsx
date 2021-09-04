@@ -1,7 +1,7 @@
 import React from "react";
 import EachUser from "./EachUser";
 import Paginator from "../Paginator/Paginator";
-import {photosType, UserType} from "../../Types/Types";
+import {UserType} from "../../Types/Types";
 
 
 type PropsType = {

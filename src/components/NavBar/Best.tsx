@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Best.module.css'
-import {bestfriendsType} from "../../redux/sideBarReducer";
 
 type PropsType = {
     key: number

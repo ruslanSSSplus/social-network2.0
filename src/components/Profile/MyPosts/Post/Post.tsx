@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Post.module.css'
-import {PostsType} from "../../../../Types/Types";
 
 type PropsType = {
     key: number
@@ -25,7 +24,7 @@ const Post: React.FC<PropsType> = (props) => {
 
       <div className={classes.newsName}>
 
-        <img src={props.avatar} className={classes.ava} />
+        <img src={props.avatar} className={classes.ava}  alt="Avatar"/>
         <span className={classes.mes}>
                         <span className={classes.user}  > {props.user}   </span>
                         <span className={classes.time}> {props.time}  </span>
@@ -36,7 +35,7 @@ const Post: React.FC<PropsType> = (props) => {
         {props.new}
       </div>
     <div>
-      <img src={props.picture} className={classes.picture}/>
+      <img src={props.picture} className={classes.picture}  alt="avatar"/>
         <button onClick={deletePost}> delete post </button>
     </div>
     </div>

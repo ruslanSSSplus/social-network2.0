@@ -1,6 +1,6 @@
 import React from 'react';
 import {addSongActionCreator, songOnChangeActionCreator} from "../../redux/musicReducer";
-import Music from "./Music";
+import Music, {MapDispatchToPropsType, MapStateToPropsType} from "./Music";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/reduxStore";
 
@@ -17,7 +17,7 @@ let mapStateToProps = (state: AppStateType) => {
 
 
 
-let MusicContainer = connect(mapStateToProps, {songOnChangeActionCreator, addSongActionCreator})(Music)
+let MusicContainer = connect<MapStateToPropsType, MapDispatchToPropsType, {}, AppStateType>(mapStateToProps, {songOnChangeActionCreator, addSongActionCreator})(Music)
 
 
 export default MusicContainer;

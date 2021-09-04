@@ -21,7 +21,7 @@ let mapStateToProps =(state: AppStateType) => {
 }
 
 
-export default compose<React.ComponentType>(connect(mapStateToProps,{...actions}),
+export default compose<React.ComponentType>(connect(mapStateToProps,{addPostActionCreator: actions.addPostActionCreator}),
      withAuthRedirect
 )
 (News)

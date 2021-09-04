@@ -1,8 +1,8 @@
 import React from 'react';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-import {ProfileType, UserType} from "../../Types/Types";
-import {number} from "yup";
+import {ProfileType} from "../../Types/Types";
+
 
 
 

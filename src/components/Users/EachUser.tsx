@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./users.module.css";
 import photoAva from "../../assets/images/DZIAss-5O_I.jpg";
 import {NavLink} from "react-router-dom";
-import {photosType, UserType} from "../../Types/Types";
+import { UserType} from "../../Types/Types";
 
 
 
@@ -18,7 +18,7 @@ let EachUser: React.FC<PropsType> = (props) => {
     return <div key={user.id} className={classes.newUsers}>
                 <div className={classes.userInfo}>
                     <NavLink to={'/profile/' + user.id}>
-                        <img src={user.photos.small != null ? user.photos.small : photoAva} className={classes.userPhoto}/>
+                        <img alt="avatar" src={user.photos.small != null ? user.photos.small : photoAva} className={classes.userPhoto}/>
                     </NavLink>
                     <span className={classes.userInfoShort}>
                 <div className={classes.fullname}>

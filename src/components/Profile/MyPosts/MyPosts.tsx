@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './MyPosts.module.css'
 import AddPostFormik from "../../AddPostForm/AddPostForm";
 import Post from "./Post/Post";
-import {PostsType, UserType} from "../../../Types/Types";
+import {PostsType} from "../../../Types/Types";
 
 export type MapStatePropsType = {
     posts: Array<PostsType>

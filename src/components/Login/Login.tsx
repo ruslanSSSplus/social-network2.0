@@ -25,9 +25,6 @@ type MapDispatchPropsType = {
     loginThunk: (email: string, password: string, rememberMe: boolean, captcha: string | null)=> void
 }
 
-type OwnPropsType= {
-
-}
 
 const initialValues: MyFormValues = {
     email: '',
@@ -103,4 +100,4 @@ const mapStateToProps =(state: AppStateType)=>({
     captchaUrl: state.auth.captchaUrl
 })
 
-export default connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {loginThunk})(Login)
+export default connect<MapStatePropsType, MapDispatchPropsType, {}, AppStateType>(mapStateToProps, {loginThunk})(Login)

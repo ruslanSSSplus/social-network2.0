@@ -13,11 +13,7 @@ let mapStateToProps =(state: AppStateType) => {
     bestfriends: state.sideBar.bestfriends
   }
 }
-let mapDispatchToProps =() => {
-  return {
-    }
-}
 
-let NavBarContainer = connect(mapStateToProps, mapDispatchToProps)(NavBar)
+let NavBarContainer = connect(mapStateToProps, {})(NavBar)
 
 export default NavBarContainer;

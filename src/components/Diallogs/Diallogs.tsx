@@ -6,20 +6,23 @@ import Eachdialog from "./Eachdialog/Eachdialog";
 import {DialogType, MessageType} from "../../redux/dialogReducer";
 
 
-
+type MyFormValues = {
+    message: string;
+}
 const initialValues: MyFormValues = {
     message: 'wish',
 }
 
-type PropsType = {
+export type MapStatePropsType = {
     messages: Array<MessageType>
     dialogs: Array<DialogType>
+}
+export type MapDispatchPropsType = {
     addMessageActionCreator: (newText: string) => void
 }
+type PropsType = MapDispatchPropsType & MapStatePropsType
 
-type MyFormValues = {
-    message: string;
-}
+
 type OnSubmitType = {
     onSubmit: (values: {message: string}) => void
 }

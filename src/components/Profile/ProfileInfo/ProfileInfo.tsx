@@ -4,7 +4,7 @@ import Preloader from "../../common/Preloder/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
 import {contactsType, ProfileType} from "../../../Types/Types";
-import {promises} from "dns";
+
 
 
 type PropsType = {
@@ -48,7 +48,7 @@ const ProfileInfo: React.FC<PropsType> = ({profile ,status, updateStatusThunk, i
     return <div>
       <div className={classes.description}>
         <div >
-            <img className={classes.avatar} src={ profile.photos.large === null ? 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png' : profile.photos.large }/>
+            <img className={classes.avatar} alt="avatar" src={ profile.photos.large === null ? 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png' : profile.photos.large }/>
             {isOwner && <input onChange={mainPhotoSelected} type={'file'}/>}
         </div>
           <div className={classes.info}>

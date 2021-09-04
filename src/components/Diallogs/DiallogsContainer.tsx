@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {actions } from "../../redux/dialogReducer";
-import Diallogs from "./Diallogs";
+import Diallogs, {MapDispatchPropsType, MapStatePropsType} from "./Diallogs";
 import {connect} from "react-redux";
 
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
@@ -22,6 +22,6 @@ let mapStateToProps =(state: AppStateType) => {
 
 
 export default compose<React.ComponentType>(
-    connect(mapStateToProps, {...actions}),
+    connect<MapStatePropsType, MapDispatchPropsType, {}, AppStateType>(mapStateToProps, {addMessageActionCreator: actions.addMessageActionCreator}),
     withAuthRedirect
 )(Diallogs);

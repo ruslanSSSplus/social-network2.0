@@ -2,15 +2,18 @@ import React, {ChangeEvent} from 'react';
 import classes from './Music.module.css'
 import EachSong from "./EachSong/EachSong";
 import {SongsType} from "../../redux/musicReducer";
+import {MapDispatchPropsType} from "../Diallogs/Diallogs";
 
-type PropsType = {
+export type MapStateToPropsType = {
     songs: Array<SongsType>
     newsongtext: string
+
+}
+export type MapDispatchToPropsType = {
     songOnChangeActionCreator: (text: string) => void
     addSongActionCreator: () => void
 }
-
-
+type PropsType = MapDispatchToPropsType & MapStateToPropsType
 
 
 const Music: React.FC<PropsType>  =(props) => {

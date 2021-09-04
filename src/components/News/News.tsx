@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './News.module.css'
 import AddPostFormik from "../AddPostForm/AddPostForm";
-import EachNew from "./EachNew/EachNew";
+
 
 import {PostsType} from "../../Types/Types";
 

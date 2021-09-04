@@ -1,4 +1,3 @@
-import React from 'react';
 import MyPosts, {MapStatePropsType} from "./MyPosts";
 import {connect} from "react-redux";
 
