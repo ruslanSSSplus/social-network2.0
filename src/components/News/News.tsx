@@ -20,9 +20,9 @@ const News: React.FC<PropsType>  =(props) => {
     return (
         < div className={classes.content}>
            <div>
-               <div>
+
                    <AddPostFormik addPostActionCreator={props.addPostActionCreator}/>
-               </div>
+
            </div>
             {newsElements}
         </div>

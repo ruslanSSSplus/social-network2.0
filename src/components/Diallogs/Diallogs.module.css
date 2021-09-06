@@ -2,10 +2,10 @@
 .dialogs
 {
     display: grid;
-    width: 1200px;
+    width: 2500px;
     height: 800px;
     margin: 0 auto;
-
+    text-align: left;
 
 
     grid-template-columns: 1fr 20fr ;
@@ -22,7 +22,7 @@
 }
 .but{
     position:absolute;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     border-radius: 5px;
     padding: 5px;
@@ -30,9 +30,9 @@
 .text
 {
     color: red;
-    width: 600px;
+    width: 400px;
     font-size: 20px;
-    height: 30px;
+    height: 40px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     border-radius: 5px;
     padding: 5px;

@@ -22,3 +22,6 @@ export  const getCurrentPage =(state: AppStateType) =>{
 export  const getisFetching =(state: AppStateType) =>{
     return state.friends.isFetching
 }
+export  const getUsersFilter =(state: AppStateType) =>{
+    return state.friends.filter
+}

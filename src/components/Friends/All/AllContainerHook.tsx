@@ -26,7 +26,7 @@ type OwnPropsType = {
 type all = MapStatePropsType & MapDispatchPropsType & OwnPropsType
 
 
-const AllContainerHoook: React.FC<all> =(props)=> {
+const AllContainerHook: React.FC<all> =(props)=> {
 
 
 
@@ -58,5 +58,5 @@ let mapStateToProps =(state: AppStateType) => {
 
 export default compose<React.ComponentType>(
     connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {unfollowThunk, getUsersThunk, ...actions}),    withAuthRedirect,
-)(AllContainerHoook)
+)(AllContainerHook)
 

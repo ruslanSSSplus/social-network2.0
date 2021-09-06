@@ -1,13 +1,13 @@
 
 
-.per{
-    display: grid;
-    width: 1200px;
-    margin: 0 auto;
-    grid-template-areas:
-    'a f';
+/*.per{*/
+/*    display: grid;*/
+/*    width: 2200px;*/
+/*    margin: 0 auto;*/
+/*    grid-template-areas:*/
+/*    'a f';*/
 
 
-    grid-template-columns: 10fr 2fr ;
-    grid-gap: 10px;
-}
+/*    grid-template-columns: 10fr 5fr ;*/
+/*    grid-gap: 10px;*/
+/*}*/

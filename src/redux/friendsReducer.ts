@@ -10,7 +10,7 @@ const SET_USERS = 'SET-USERS'
 const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE'
 const SET_TOTAL_ITEMS_COUNT = 'SET_TOTAL_ITEMS_COUNT'
 const IS_FETCHING = 'IS_FETCHING'
-
+const SET_FILTER = 'SET_FILTER'
 
 export type FriendDateType = {
     id: number,
@@ -19,6 +19,7 @@ export type FriendDateType = {
     avatar: string,
     surname: string,
     friendsAlready: boolean,
+
 }
 
 
@@ -65,11 +66,14 @@ let initialState = {
     totalItemsCount: 222,
     currentPage: 1,
     isFetching: true,
-    isFriend: true
-
+    isFriend: true,
+    filter: {
+        term: '',
+        friend: null as null | boolean
+    }
 }
 type InitialStateType = typeof initialState
-
+export type FilterType = typeof initialState.filter
 type ActionsType = InferActionsTypes<typeof actions>
 
 
@@ -113,6 +117,10 @@ export const actions = {
     setCurrentPage: (p: number) => ({
         type: SET_CURRENT_PAGE,
         p,
+    } as const),
+    setFilter: (filter: FilterType) => ({
+        type: SET_FILTER,
+        payload: filter
     } as const),
 }
 
@@ -187,6 +195,9 @@ const friendsReducer = (state = initialState, action: ActionsType): InitialState
         case IS_FETCHING: {
             return {...state, isFetching: action.isFetchingBOOL}
         }
+        case SET_FILTER: {
+            return {...state, filter: action.payload}
+        }
         default:
             return state;
     }
@@ -196,17 +207,28 @@ const friendsReducer = (state = initialState, action: ActionsType): InitialState
 export type ThunkType = BaseThunkType<ActionsType>
 
 export const getUsersThunkCreater = (currentPage: number,
-                                     pageSize: number): ThunkType => {
+                                     pageSize: number,
+                                     filter: FilterType): ThunkType => {
     return async (dispatch) => {
         dispatch(actions.isFetchingDispatch(true))
         dispatch(actions.setCurrentPage(currentPage))
-        let response = await usersAPI.getUsers(currentPage, pageSize)
+        dispatch(actions.setFilter(filter))
+        let response = await usersAPI.getUsers(currentPage, pageSize, filter.term, filter.friend)
             dispatch(actions.isFetchingDispatch(false))
             dispatch(actions.setUsers(response.items))
             dispatch(actions.setTotalItemsCount(response.totalCount))
     }
 }
-
+export const getUsersThunk = (isFriend: boolean): ThunkType => async (dispatch) => {
+    let response = await usersAPI.getUsersFriends()
+    for (let i = 0; i < 10; i++) {
+        if (response.items[i].followed === true && isFriend) {
+            dispatch(actions.addUserAC(response.items[i].id, response.items[i].photos.large != null ?
+                response.items[i].photos.large : 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png', response.items[i].name,))
+        }
+    }
+    dispatch(actions.friendCheckAC())
+}
 export const unfollowThunk = (id: number): ThunkType => async (dispatch) => {
     if (id > 100000) {
         dispatch(actions.removeFriendAC(id))
@@ -227,14 +249,5 @@ export const unfollowThunk = (id: number): ThunkType => async (dispatch) => {
             dispatch(actions.addUserAC(id, 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png', name))
     }
 }
-export const getUsersThunk = (isFriend: boolean): ThunkType => async (dispatch) => {
-    let response = await usersAPI.getUsersFriends()
-    for (let i = 0; i < 10; i++) {
-         if (response.items[i].followed === true && isFriend) {
-             dispatch(actions.addUserAC(response.items[i].id, response.items[i].photos.large != null ?
-                 response.items[i].photos.large : 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png', response.items[i].name,))
-         }
-    }
-    dispatch(actions.friendCheckAC())
-}
+
 export default friendsReducer;

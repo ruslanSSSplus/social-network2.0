@@ -52,7 +52,7 @@ const ProfileInfo: React.FC<PropsType> = ({profile ,status, updateStatusThunk, i
             {isOwner && <input onChange={mainPhotoSelected} type={'file'}/>}
         </div>
           <div className={classes.info}>
-              Status (дабл клик и можно менять )
+              Status (дабл клик)
           </div>
           <b><ProfileStatusWithHooks status={status} updateStatusThunk={updateStatusThunk}/></b>
           {editMode ? <ProfileDataForm onSubmit={onSubmit} initialValues={profile} profile={profile} saveProfile={saveProfile} isError={isError}/> :
