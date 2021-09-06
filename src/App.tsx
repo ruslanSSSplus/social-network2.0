@@ -128,7 +128,7 @@ class App extends React.Component<PropsType> {
                                      </Switch>
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                    <Footer style={{ textAlign: 'center' }}>Social-network 2.0 ©2021 Created by Ruslan SSS Ghoul</Footer>
                 </Layout>
             </Layout>
             // <div className="app-wrapper">
