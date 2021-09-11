@@ -23,8 +23,8 @@ export const HeaderComponent: React.FC = (props) => {
       <span className={classes.loginBlock}>
        {isAuth? <span>
            <NavLink to="/profile" className={classes.signIn}>{login}</NavLink>
-       <Button className={classes.button1} onClick={() => dispatch(logOutThunk())}> logIot</Button></span> : <NavLink className={classes.signIn} to={'/login'}>Sign in</NavLink>}
-          <img alt={'ava'} src={userAva as string} className={classes.userAvatar}/>
+       <Button className={classes.button1} onClick={() => dispatch(logOutThunk())}> logIot</Button>   <img alt={'ava'} src={userAva as string} className={classes.userAvatar}/></span> : <NavLink className={classes.signIn} to={'/login'}>Sign in</NavLink>}
+
    </span>
   </header>
 }
