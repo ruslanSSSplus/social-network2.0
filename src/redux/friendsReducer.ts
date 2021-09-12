@@ -1,6 +1,7 @@
-import {usersAPI} from "../api/api";
+
 import { UserType} from "../Types/Types";
 import {BaseThunkType, InferActionsTypes} from "./reduxStore";
+import {usersAPI} from "../api/user-api";
 const ADD_USER = 'ADD_USER';
 const FRIEND_CHECK = 'FRIEND_CHECK'
 const FRIEND_REMOVE = 'FRIEND_REMOVE'

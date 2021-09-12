@@ -23,6 +23,7 @@ import { Layout, Menu } from 'antd';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import classes from "./components/NavBar/NavBar.module.css";
 import {HeaderComponent} from "./components/Header/Header";
+import {ChatPage} from "./pages/Chat/ChatPage";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -85,7 +86,8 @@ class App extends React.Component<PropsType> {
                             <Link  to = '/news' >News</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<UploadOutlined />}>
-                            <Link to = '/diallogs'>Messages</Link>
+                            <Link to = '/chat' >Chat</Link>
+
                         </Menu.Item>
                         <Menu.Item key="4" icon={<UserOutlined />}>
                             <Link to = '/friends' > Friends</Link>
@@ -96,73 +98,52 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="6" icon={<UserOutlined />}>
                             <Link to = '/music' >Music</Link>
                         </Menu.Item>
+                        <Menu.Item key="7" icon={<UserOutlined />}>
+                            <Link to = '/diallogs'>Messages</Link>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header className="site-layout-sub-header-background" style={{ padding: 0, height: 68 }} >
-                     <HeaderComponent />
+                    <Header className="site-layout-sub-header-background" style={{padding: 0, height: 68}}>
+                        <HeaderComponent/>
                     </Header>
-                    <Content style={{ margin: '24px 16px 0' }}>
-                        <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                    <Content style={{margin: '24px 16px 0'}}>
+                        <div className="site-layout-background" style={{padding: 24, minHeight: 360}}>
                             <Switch>
-                                             <Route path='/diallogs' render={() => <DiallogsContainer/>}/>
-                                             <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+                                <Route path='/chat'
+                                       render={() => <ChatPage />}/>
 
-                                          <Route path='/news' render={() => <NewsContainer/>}/>
-                                           <Route path='/music'
-                                              render={() => {
-                                              return <Suspense fallback={<div>loading...</div>}>
-                                                      <MusicContainer/>
-                                                   </Suspense>
-                                               }}/>
-                                         <Route path='/friends'
-                                                render={() => <Friends/>}/>
-                                         <Route path='/users'
-                                               render={() => <UsersPage/>}/>
-                                        <Route path='/login'
-                                                render={() => <Login/>}/>
 
-                                        <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
-                                         <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>
-                                        {/*<Route exatc path='/' render={() => <ProfileContainer/>}/>*/}
-                                     </Switch>
+                                <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+
+                                <Route path='/news' render={() => <NewsContainer/>}/>
+                                <Route path='/music'
+                                       render={() => {
+                                           return <Suspense fallback={<div>loading...</div>}>
+                                               <MusicContainer/>
+                                           </Suspense>
+                                       }}/>
+                                <Route path='/friends'
+                                       render={() => <Friends/>}/>
+                                <Route path='/users'
+                                       render={() => <UsersPage/>}/>
+                                <Route path='/login'
+                                       render={() => <Login/>}/>
+                                <Route path='/diallogs' render={() => <DiallogsContainer/>}/>
+
+
+                                <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
+                                <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>
+
+                            </Switch>
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Social-network 2.0 ©2021 Created by Ruslan SSS Ghoul</Footer>
+                    <Footer style={{textAlign: 'center'}}>Social-network 2.0 ©2021 Created by Ruslan SSS Ghoul</Footer>
                 </Layout>
             </Layout>
-            // <div className="app-wrapper">
-            //     <HeaderContainer/>
-            //
+
             //     <NavBarContainer/>
-            //
-            //
-            //     <div className='app-wrapper-content'>
-            //         <Switch>
-            //             <Route path='/diallogs' render={() => <DiallogsContainer/>}/>
-            //             <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
-            //
-            //             <Route path='/news' render={() => <NewsContainer/>}/>
-            //             <Route path='/music'
-            //                    render={() => {
-            //                        return <Suspense fallback={<div>loading...</div>}>
-            //                            <MusicContainer/>
-            //                        </Suspense>
-            //                    }}/>
-            //             <Route path='/friends'
-            //                    render={() => <Friends/>}/>
-            //             <Route path='/users'
-            //                    render={() => <UsersPage/>}/>
-            //             <Route path='/login'
-            //                    render={() => <Login/>}/>
-            //
-            //             <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
-            //             <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>
-            //             {/*<Route exatc path='/' render={() => <ProfileContainer/>}/>*/}
-            //         </Switch>
-            //     </div>
-            //
-            // </div>
+
 
         );
     }

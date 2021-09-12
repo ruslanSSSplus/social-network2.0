@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './GenaPosts.module.css'
-import GenaPost from './GenaPost/GenaPost';
-import {addPost} from "../../../OldStateOldClassComponents/StoreFirstVersion";
+
 
 
 const GenaPosts = (props) => {

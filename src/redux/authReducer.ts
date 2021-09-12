@@ -1,6 +1,9 @@
-import {authAPI, ResultCodeEnum, ResultCodeWithCaptchaEnum, securityAPI, usersAPI} from "../api/api";
+import {ResultCodeEnum, ResultCodeWithCaptchaEnum} from "../api/api";
 
 import {BaseThunkType, InferActionsTypes} from "./reduxStore";
+import {authAPI} from "../api/auth-api";
+import {securityAPI} from "../api/security-api";
+import {usersAPI} from "../api/user-api";
 
 const SET_USER_DATE = 'AUTH/SET_USER_DATE';
 const SET_USER_AVATAR = 'AUTH/SET_USER_AVATAR';

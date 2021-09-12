@@ -1,8 +1,10 @@
 import {getNewMassiv} from "./newsReducer";
-import {profileAPI, usersAPI} from "../api/api";
+
 import {photosType, PostsType, ProfileType} from "../Types/Types";
 import {ThunkAction} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "./reduxStore";
+import {profileAPI} from "../api/profile-api";
+
 
 const ADD_POST = 'ADD-POST';
 const SET_USERS_PROFILE = 'SET_USERS_PROFILE';
@@ -158,7 +160,7 @@ export const actions = {
 
 
 export const  getProfileThunk = (userId: number | null): ThunkType => async (dispatch) => {
-    let response = await usersAPI.getProfile(userId)
+    let response = await profileAPI.getProfile(userId)
     dispatch(actions.setUsersProfile(response.data));
 }
 export const getStatusThunk = (userId: number):ThunkType => async (dispatch) => {

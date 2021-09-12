@@ -1,0 +1,10 @@
+.ava
+{
+    height: 60px;
+    width: 60px;
+}
+.messages
+{
+    height: 600px;
+    overflow-y: auto;
+}
