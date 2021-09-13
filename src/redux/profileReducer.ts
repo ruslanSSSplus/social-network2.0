@@ -12,7 +12,7 @@ const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
 const SET_PHOTO = 'SET_PHOTO'
 const SET_ERROR = 'profile/SET_ERROR';
-
+const SET_OWNER_PHOTO = 'profile/SET_OWNER_PHOTO';
 
 
 let initialState = {
@@ -67,6 +67,7 @@ let initialState = {
     status: '',
     countPosts: 6,
     isError: false,
+    photo: null as string | null
 }
 
 export type initialStateType = typeof initialState
@@ -112,10 +113,15 @@ const profileReducer = (state = initialState, action: ActionsType): initialState
             return {...state, profile: {...state.profile, photos: action.photos} as ProfileType};
         }
         case SET_ERROR:
-            debugger
             return {
                 ...state,
                 isError: action.Error,
+
+            }
+        case SET_OWNER_PHOTO:
+            return {
+                ...state,
+                photo: action.photo,
 
             }
         default:
@@ -149,8 +155,11 @@ export const actions = {
     setStatus: (status: string) => ({
         type: SET_STATUS,
         status
+    }as const),
+    setOwnerAvatar: (photo: string | null) => ({
+        type: SET_OWNER_PHOTO,
+        photo
     }as const)
-
 }
 
 
@@ -162,6 +171,10 @@ export const actions = {
 export const  getProfileThunk = (userId: number | null): ThunkType => async (dispatch) => {
     let response = await profileAPI.getProfile(userId)
     dispatch(actions.setUsersProfile(response.data));
+}
+export const  getOwnerAva = (userId: number | null): ThunkType => async (dispatch) => {
+    let response = await profileAPI.getProfile(userId)
+    dispatch(actions.setOwnerAvatar(response.data.photos.small));
 }
 export const getStatusThunk = (userId: number):ThunkType => async (dispatch) => {
     let response = await profileAPI.getStatus(userId)
