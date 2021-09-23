@@ -1,0 +1,46 @@
+
+
+.temp {
+
+    height: 50px;
+    color: black;
+    font-size: 42px;
+   padding-top: 25px;
+}
+.halfContainer {
+    height: 220px;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+.title {
+    height: 50px;
+    padding-top: 20px;
+    color: black;
+    font-size: 44px;
+
+
+}
+.subTitle {
+    height: 50px;
+
+    padding-top: 20px;
+    color: black;
+    font-size: 24px;
+}
+
+.text1 {
+    padding-top: 10px;
+    color: #2c2c2c;
+    font-size: 30px;
+}
+.loading
+{
+    padding-left: 10px;
+    font-size: 20px;
+}
+.close
+{
+    cursor: pointer;
+    height: 20px;
+}
