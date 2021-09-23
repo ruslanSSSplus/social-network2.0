@@ -29,7 +29,7 @@ export const weatherOptions = {
         iconName: '🌧',
         // iconName: 'weather-rainy',
         gradient: ['#3A7BD5', '#3A6073'],
-        title: 'Моросит чуть-чуть',
+        title: 'Моросит слегка',
         subTitle: 'Не заболей'
     } as weatherOptionsType,
     Thunderstorm: {
@@ -57,14 +57,14 @@ export const weatherOptions = {
         iconName: '💨',
         // iconName: 'weather-windy',
         gradient: ['#4c669f', '#3b5998', '#192f6a'],
-        title: 'Почти как туман',
+        title: 'Почти туман',
         subTitle: 'Но не туман'
     } as weatherOptionsType,
     Haze: {
         iconName: '💨',
         //iconName: 'weather-hazy',
         gradient: ['#4c669f', '#3b5998', '#192f6a'],
-        title: 'Почти как туман',
+        title: 'Почти туман',
         subTitle: 'Но не туман'
     } as weatherOptionsType,
     Sand: {
@@ -85,8 +85,8 @@ export const weatherOptions = {
         iconName: '💨',
         //   iconName: 'weather-hazy',
         gradient: ['#4c669f', '#3b5998', '#192f6a'],
-        title: 'На улице не знаю даже что',
-        subTitle: 'Не ходи, оно тебе не надо'
+        title: 'На улице шквал',
+        subTitle: 'Не ходи'
     } as weatherOptionsType,
     Tornado: {
         iconName: '🌪',
