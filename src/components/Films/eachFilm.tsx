@@ -25,7 +25,7 @@ const EachFilm: React.FC<propsType> = (props) => {
           </div>
        <div>
 
-                 <h2> {props.name}     <span className={classes.rating}>{props.rating} / 10</span>  </h2>
+                 <h2> {props.name} <span className={classes.rating}> {props.rating} / 10 </span>  </h2>
 
 
            <h4> {props.description}</h4>
