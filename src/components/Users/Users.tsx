@@ -17,7 +17,7 @@ import * as queryString from "querystring";
 import {UsersSearchForm} from "./UsersSearchForm";
 
 type PropsType = {}
-type QueryType = {term?: string, page?: string, friend?: string}
+export type QueryType = {term?: string, page?: string, friend?: string}
 
 export const Users: React.FC<PropsType> = (props) => {
 
@@ -35,7 +35,7 @@ export const Users: React.FC<PropsType> = (props) => {
 
     useEffect(() => {
         const parsed = queryString.parse(history.location.search.substr(1)) as QueryType
-        debugger
+
         let actualPage = currentPage
         let actualFilter = filter
 

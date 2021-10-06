@@ -14,7 +14,6 @@ export const WeatherContainer : React.FC =()=>{
     let [condition, setCondition] = useState('' as  keyof typeof weatherOptions)
 
     let gerPosition = async (pos: any) => {
-        debugger
         let crd = pos.coords;
      await getWeather(crd.latitude, crd.longitude)
     }

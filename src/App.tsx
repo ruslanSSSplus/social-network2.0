@@ -25,6 +25,7 @@ import { SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined, Messag
 import {HeaderComponent} from "./components/Header/Header";
 import {ChatPage} from "./pages/Chat/ChatPage";
 import {WeatherContainer} from "./components/Weather/WeatherContainer";
+import {FilmsContainer} from "./components/Films/FilmsContainer";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -107,6 +108,9 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="7" icon={<MessageOutlined />}>
                             <Link to = '/diallogs'>Messages</Link>
                         </Menu.Item>
+                        <Menu.Item key="8" icon={<MessageOutlined />}>
+                            <Link to = '/films'>Films</Link>
+                        </Menu.Item>
                         {/*<Menu.Item key="8" icon={<CloudOutlined />}>*/}
                         {/*    <Link to = '/weather'>Weather</Link>*/}
                         {/*</Menu.Item>*/}
@@ -116,7 +120,7 @@ class App extends React.Component<PropsType> {
                         }}>
                             <WeatherContainer/>
                         </div>}
-                        {!this.state.needWeather &&  <Menu.Item key="8" icon={<CloudOutlined />} onClick={() => {
+                        {!this.state.needWeather &&  <Menu.Item key="9" icon={<CloudOutlined />} onClick={() => {
                             this.setState({needWeather: true})
                             console.log(this.state.needWeather)
                         }}>
@@ -153,6 +157,7 @@ class App extends React.Component<PropsType> {
                                 <Route path='/diallogs' render={() => <DiallogsContainer/>}/>
                                 <Route path='/weather' render={() => <WeatherContainer />}/>
 
+                                <Route path='/films' render={() => <FilmsContainer />}/>
 
                                 <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
                                 <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>

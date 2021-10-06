@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './All.module.css'
 import Friend from "./Friend/Friend";
-import {ProfileType} from "../../../Types/Types";
-import {number} from "yup";
+
 import {FriendDateType} from "../../../redux/friendsReducer";
 
 

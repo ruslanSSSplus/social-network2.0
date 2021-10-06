@@ -9,6 +9,7 @@ import authReducer from "./authReducer";
 import thunkMiddleware, {ThunkAction} from 'redux-thunk'
 import appReducer from "./appReducer";
 import chatReducer from "./chatReducer";
+import filmReducer from "./filmReducer";
 
 
 let rootReducer = combineReducers({
@@ -20,7 +21,8 @@ let rootReducer = combineReducers({
     sideBar: sideBarReducer,
     auth: authReducer,
     app: appReducer,
-    chat: chatReducer
+    chat: chatReducer,
+    film: filmReducer
 })
 
 type RootReducersType = typeof rootReducer

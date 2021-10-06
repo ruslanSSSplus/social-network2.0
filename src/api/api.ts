@@ -1,5 +1,5 @@
 import axios from "axios";
-import {photosType, ProfileType, UserType} from "../Types/Types";
+import {photosType} from "../Types/Types";
 
 
 

@@ -1,4 +1,4 @@
-import {ProfileType} from "../Types/Types";
+    import {ProfileType} from "../Types/Types";
 import {getUsersType, instance, ThreeParamsType} from "./api";
 
 export const usersAPI = {
