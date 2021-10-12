@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../redux/reduxStore";
 import {logOutThunk} from "../../redux/authReducer";
 import {Button} from "antd";
-import {getOwnerAva, getProfileThunk} from "../../redux/profileReducer";
+import {getOwnerAva} from "../../redux/profileReducer";
 
 
 

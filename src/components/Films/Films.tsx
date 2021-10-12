@@ -21,8 +21,11 @@ export const Films : React.FC =() => {
 
     const currentPage = useSelector((state: AppStateType)=> state.film.currentPage)
     const films = useSelector((state: AppStateType) => state.film.films[0])
+    console.log(films)
 
-     let filmsElements = films.map((el: FilmType) => <EachFilm rating={el.rating} genres={el.genres} description={el.description_full}  large_cover_image={el.large_cover_image} key={el.id} name={el.title} />)
+     let filmsElements = films.map((el: FilmType) => <EachFilm rating={el.rating} genres={el.genres} description={el.description_full}
+                                                               large_cover_image={el.large_cover_image} key={el.id}
+                                                              id={el.id} name={el.title} />)
 
 
     return (<div>

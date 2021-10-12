@@ -2,7 +2,7 @@ import React, {ChangeEvent} from 'react';
 import classes from './Music.module.css'
 import EachSong from "./EachSong/EachSong";
 import {SongsType} from "../../redux/musicReducer";
-import {MapDispatchPropsType} from "../Diallogs/Diallogs";
+
 
 export type MapStateToPropsType = {
     songs: Array<SongsType>

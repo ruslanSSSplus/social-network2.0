@@ -17,6 +17,7 @@ const dispatch = useDispatch()
 
   useEffect( () => {
       dispatch(getFilmsThunkCreater(1))
+
  }, [])
 
     const isLoading = useSelector((state: AppStateType) => state.film.isLoading)

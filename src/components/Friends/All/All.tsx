@@ -22,7 +22,7 @@ const All: React.FC<PropsType> =(props) => {
 
     let addFriend = () => {
 
-        ava1.current.value=="" ?   props.addfriend(888888, 'https://sun1-93.userapi.com/s/v1/ig2/i3174V5HMNQgKMxXm43MBqaBeqvf9lPbnq34n_NTXqwUY7XMzkok7XT1gZSQjBqJbxhns3gHCZx93ppb6zlqA5wL.jpg?size=200x200&quality=96&crop=53,33,478,478&ava=1', name1.current.value)
+        ava1.current.value ==="" ?   props.addfriend(888888, 'https://sun1-93.userapi.com/s/v1/ig2/i3174V5HMNQgKMxXm43MBqaBeqvf9lPbnq34n_NTXqwUY7XMzkok7XT1gZSQjBqJbxhns3gHCZx93ppb6zlqA5wL.jpg?size=200x200&quality=96&crop=53,33,478,478&ava=1', name1.current.value)
         : props.addfriend(888888, ava1.current.value, name1.current.value)
         name1.current.value = '';
         ava1.current.value = '';

@@ -1,4 +1,3 @@
-import React from 'react';
 import {addSongActionCreator, songOnChangeActionCreator} from "../../redux/musicReducer";
 import Music, {MapDispatchToPropsType, MapStateToPropsType} from "./Music";
 import {connect} from "react-redux";

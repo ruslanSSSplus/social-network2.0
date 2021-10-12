@@ -1,11 +1,9 @@
 import {InferActionsTypes} from "./reduxStore";
-
-
 import {filmAPI} from "../api/film-api";
-
 const SET_CURRENT_PAGE = 'FILMS/SET_CURRENT_PAGE'
 const ADD_FILM = 'FILMS/ADD_FILM';
 const IS_LOADING = 'FILMS/IS_LOADING'
+const DELETE_FILM = 'FILMS/DELETE_FILM'
 
 export type FilmType ={
     background_image: string
@@ -58,6 +56,12 @@ const filmReducer = (state = initialState, action: ActionsType): initialStateTyp
         case SET_CURRENT_PAGE: {
             return {...state, currentPage: action.p}
         }
+        case DELETE_FILM: {
+            debugger
+
+            return {...state, films: state.films.filter((item: FilmType) => item.id !== action.idToRemove)}
+
+        }
         default:
             return state;
     }
@@ -88,6 +92,10 @@ export const actions = {
         type: SET_CURRENT_PAGE,
         p,
     } as const),
+    deleteFilm: (idToRemove: number) => ({
+        type: DELETE_FILM,
+        idToRemove
+    }as const),
 }
 
 

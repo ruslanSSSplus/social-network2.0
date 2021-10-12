@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from "./Films.module.css";
+import {useDispatch} from "react-redux";
+import {actions} from "../../redux/filmReducer";
 
 
 
@@ -10,7 +12,8 @@ type propsType ={
     large_cover_image: string,
     description: string,
     genres: Array<string>,
-    rating: number
+    rating: number,
+    id: number
 }
 
 const EachFilm: React.FC<propsType> = (props) => {
@@ -18,10 +21,14 @@ const EachFilm: React.FC<propsType> = (props) => {
     let d = props.genres.map(p=> <div>
         •{p}
     </div>)
+    const dispatch = useDispatch()
+    const deletePost = (id: number) =>{
+        dispatch(actions.deleteFilm(id))
 
+    }
     return <div className={classes.eachFilm}>
           <div>
-              <img src={props.large_cover_image} className={classes.png}/>
+              <img alt={'q'} src={props.large_cover_image} className={classes.png}/>
           </div>
        <div>
 
@@ -30,6 +37,8 @@ const EachFilm: React.FC<propsType> = (props) => {
 
            <h4> {props.description}</h4>
            <h3 className={classes.des}> {d}</h3>
+           <button> like </button>
+           <button onClick={()=> deletePost(props.id)}> delete </button>
        </div>
 
 

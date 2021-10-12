@@ -1,9 +1,7 @@
 import {v1} from 'uuid'
 import {BaseThunkType, InferActionsTypes} from "./reduxStore";
-
 import {chatApi, ChatMessageAPIType, StatusType} from "../api/chat-api"
 import {Dispatch} from "redux";
-
 const SET_RECEIVED = 'CHAT/SET_RECEIVED';
 const STATUS_CHANGED = 'CHAT/STATUS_CHANGED';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './Friend.module.css'
 import {NavLink} from "react-router-dom";
-import {ProfileType} from "../../../../Types/Types";
-import {number} from "yup";
+
 
 
 type PropsType = {
