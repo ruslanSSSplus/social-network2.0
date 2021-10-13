@@ -19,15 +19,14 @@ import store, {AppStateType} from "./redux/reduxStore";
 import {Login} from "./components/Login/Login";
 
 
-import {Layout, Menu, Tree} from 'antd';
+import {Layout, Menu} from 'antd';
 import { SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined, MessageOutlined, WechatOutlined, SearchOutlined} from '@ant-design/icons';
 
 import {HeaderComponent} from "./components/Header/Header";
 import {ChatPage} from "./pages/Chat/ChatPage";
 import {WeatherContainer} from "./components/Weather/WeatherContainer";
 import {FilmsContainer} from "./components/Films/FilmsContainer";
-import tree from "./tree";
-import TestTask from "./tree";
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -65,7 +64,7 @@ class App extends React.Component<PropsType> {
             return <Preloader />
         }
 
-console.log(+!null)
+
         return (
             <Layout>
                 <Sider
@@ -113,9 +112,7 @@ console.log(+!null)
                         <Menu.Item key="8" icon={<MessageOutlined />}>
                             <Link to = '/films'>Films</Link>
                         </Menu.Item>
-                        <Menu.Item key="10" icon={<MessageOutlined />}>
-                            <Link to = '/tree'>Tree</Link>
-                        </Menu.Item>
+
                         {/*<Menu.Item key="8" icon={<CloudOutlined />}>*/}
                         {/*    <Link to = '/weather'>Weather</Link>*/}
                         {/*</Menu.Item>*/}
@@ -163,7 +160,7 @@ console.log(+!null)
                                 <Route path='/weather' render={() => <WeatherContainer />}/>
 
                                 <Route path='/films' render={() => <FilmsContainer />}/>
-                                <Route path='/tree' render={() => <TestTask />}/>
+
 
 
                                 <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>

@@ -21,7 +21,7 @@ const chatReducer = (state = initialState, action: ActionsType): initialStateTyp
 
     switch (action.type) {
         case SET_RECEIVED:
-            debugger
+
          return {
                 ...state,
             messages: [...state.messages, ...action.payload.messages.map(m => ({...m, id: v1() }))]
