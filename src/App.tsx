@@ -26,6 +26,8 @@ import {HeaderComponent} from "./components/Header/Header";
 import {ChatPage} from "./pages/Chat/ChatPage";
 import {WeatherContainer} from "./components/Weather/WeatherContainer";
 import {FilmsContainer} from "./components/Films/FilmsContainer";
+import {MainPage} from "./components/TestRoute/mainPage";
+import {ProfilePage} from "./components/TestRoute/ProfilePage";
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -112,10 +114,10 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="8" icon={<MessageOutlined />}>
                             <Link to = '/films'>Films</Link>
                         </Menu.Item>
+                        <Menu.Item key="10" icon={<MessageOutlined />}>
+                            <Link to = '/maintest'>Main</Link>
+                        </Menu.Item>
 
-                        {/*<Menu.Item key="8" icon={<CloudOutlined />}>*/}
-                        {/*    <Link to = '/weather'>Weather</Link>*/}
-                        {/*</Menu.Item>*/}
                         {this.state.needWeather && <div className={classes.weather} onClick={() => {
                             this.setState({needWeather: false})
                             console.log(this.state.needWeather)
@@ -160,7 +162,8 @@ class App extends React.Component<PropsType> {
                                 <Route path='/weather' render={() => <WeatherContainer />}/>
 
                                 <Route path='/films' render={() => <FilmsContainer />}/>
-
+                                <Route path='/maintest' render={() => <MainPage />}/>
+                                <Route path='/profiletest' render={() => <ProfilePage />}/>
 
 
                                 <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>

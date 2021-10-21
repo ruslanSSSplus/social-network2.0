@@ -2,7 +2,7 @@ import {InferActionsTypes} from "./reduxStore";
 import {filmAPI} from "../api/film-api";
 const SET_CURRENT_PAGE = 'FILMS/SET_CURRENT_PAGE'
 const ADD_FILM = 'FILMS/ADD_FILM';
-const IS_LOADING = 'FILMS/IS_LOADING'
+
 const DELETE_FILM = 'FILMS/DELETE_FILM'
 
 export type FilmType ={
@@ -49,16 +49,11 @@ type ActionsType = InferActionsTypes<typeof actions>
 const filmReducer = (state = initialState, action: ActionsType): initialStateType => {
     switch (action.type){
         case ADD_FILM:
-                return {...state, films: [action.films]}
-        case IS_LOADING:
-            return {...state, isLoading: action.is}
-
+            return {...state, films: action.films, isLoading: false}
         case SET_CURRENT_PAGE: {
             return {...state, currentPage: action.p}
         }
         case DELETE_FILM: {
-            debugger
-
             return {...state, films: state.films.filter((item: FilmType) => item.id !== action.idToRemove)}
 
         }
@@ -72,21 +67,17 @@ const filmReducer = (state = initialState, action: ActionsType): initialStateTyp
 export const getFilmsThunkCreater = (pageNumber: number) => {
     return async (dispatch: any) => {
         dispatch(actions.setCurrentPage(pageNumber))
-        let response = await filmAPI.getFilms(pageNumber)
+        const response = await filmAPI.getFilms(pageNumber)
         await dispatch(actions.allFilms(response))
-        await dispatch(actions.isLoading(false))
         }
     }
+
 
 
 export const actions = {
     allFilms: (films: Array<FilmType>)  => ({
         type: ADD_FILM,
         films,
-    } as const),
-    isLoading: (is: boolean)  => ({
-        type: IS_LOADING,
-        is,
     } as const),
     setCurrentPage: (p: number) => ({
         type: SET_CURRENT_PAGE,

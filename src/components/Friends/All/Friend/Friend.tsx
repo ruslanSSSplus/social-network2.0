@@ -25,7 +25,7 @@ const Friend: React.FC<PropsType>  = (props) => {
   return <div>
 
     <div className={classes.item}>
-      <img src={props.avatar} />
+      <img alt={'ku'} src={props.avatar} />
       <NavLink to={props.link}> {props.name} {props.surname} </NavLink>
       <button onClick={() =>{unfollowing(props.id)}} className={classes.dropbtn}>Удалить из друзей</button>
     </div>

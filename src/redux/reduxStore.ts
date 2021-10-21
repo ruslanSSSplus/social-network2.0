@@ -10,6 +10,7 @@ import thunkMiddleware, {ThunkAction} from 'redux-thunk'
 import appReducer from "./appReducer";
 import chatReducer from "./chatReducer";
 import filmReducer from "./filmReducer";
+import mainTestReducer from "./mainTest";
 
 
 let rootReducer = combineReducers({
@@ -22,7 +23,8 @@ let rootReducer = combineReducers({
     auth: authReducer,
     app: appReducer,
     chat: chatReducer,
-    film: filmReducer
+    film: filmReducer,
+    maintest: mainTestReducer
 })
 
 type RootReducersType = typeof rootReducer
@@ -40,3 +42,4 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMid
 
 
 export default store
+

@@ -6,6 +6,7 @@ import {actions} from "../../redux/filmReducer";
 
 
 
+
 type propsType ={
     key: number,
     name: string,
@@ -18,15 +19,21 @@ type propsType ={
 
 const EachFilm: React.FC<propsType> = (props) => {
 
-    let d = props.genres.map(p=> <div>
-        •{p}
-    </div>)
+    let d = null
+
+    if(props.genres !== undefined){
+        d = props.genres.map(p=> <div>
+            •{p}
+        </div>)
+    }
+
+
     const dispatch = useDispatch()
     const deletePost = (id: number) =>{
         dispatch(actions.deleteFilm(id))
 
     }
-    return <div className={classes.eachFilm}>
+    return <div className={classes.eachFilm} >
           <div>
               <img alt={'q'} src={props.large_cover_image} className={classes.png}/>
           </div>

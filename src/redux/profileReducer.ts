@@ -110,6 +110,7 @@ const profileReducer = (state = initialState, action: ActionsType): initialState
             return {...state, posts: state.posts.filter((item) => item.id !== action.idToRemove)}
         }
         case SET_PHOTO: {
+
             return {...state, profile: {...state.profile, photos: action.photos} as ProfileType};
         }
         case SET_ERROR:
