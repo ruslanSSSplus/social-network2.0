@@ -11,6 +11,7 @@ import appReducer from "./appReducer";
 import chatReducer from "./chatReducer";
 import filmReducer from "./filmReducer";
 import mainTestReducer from "./mainTest";
+import booksReducer from './books'
 
 
 let rootReducer = combineReducers({
@@ -24,6 +25,9 @@ let rootReducer = combineReducers({
     app: appReducer,
     chat: chatReducer,
     film: filmReducer,
+    book: booksReducer,
+
+
     maintest: mainTestReducer
 })
 

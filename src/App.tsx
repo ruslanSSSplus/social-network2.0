@@ -28,6 +28,8 @@ import {WeatherContainer} from "./components/Weather/WeatherContainer";
 import {FilmsContainer} from "./components/Films/FilmsContainer";
 import {MainPage} from "./components/TestRoute/mainPage";
 import {ProfilePage} from "./components/TestRoute/ProfilePage";
+import Books from "./components/Books/Books";
+
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -114,6 +116,9 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="8" icon={<MessageOutlined />}>
                             <Link to = '/films'>Films</Link>
                         </Menu.Item>
+                        <Menu.Item key="9" icon={<MessageOutlined />}>
+                            <Link to = '/books'>Books</Link>
+                        </Menu.Item>
                         <Menu.Item key="10" icon={<MessageOutlined />}>
                             <Link to = '/maintest'>Main</Link>
                         </Menu.Item>
@@ -162,6 +167,9 @@ class App extends React.Component<PropsType> {
                                 <Route path='/weather' render={() => <WeatherContainer />}/>
 
                                 <Route path='/films' render={() => <FilmsContainer />}/>
+                                <Route path='/books' render={() => <Books />}/>
+
+
                                 <Route path='/maintest' render={() => <MainPage />}/>
                                 <Route path='/profiletest' render={() => <ProfilePage />}/>
 

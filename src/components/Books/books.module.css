@@ -1,0 +1,19 @@
+.full{
+    margin: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    width: 300px;
+
+}
+.form{
+    margin-left: 15px;
+}
+.ava{
+    margin: 10px;
+    width: 128px;
+    height: 166px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.info
+{
+    margin-left: 10px;
+}
