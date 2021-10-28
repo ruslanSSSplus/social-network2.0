@@ -14,7 +14,8 @@ type propsType ={
     description: string,
     genres: Array<string>,
     rating: number,
-    id: number
+    id: number,
+    like: boolean | undefined
 }
 
 const EachFilm: React.FC<propsType> = (props) => {
@@ -33,18 +34,26 @@ const EachFilm: React.FC<propsType> = (props) => {
         dispatch(actions.deleteFilm(id))
 
     }
+    const likeFilm = (id: number) =>{
+        dispatch(actions.likeFilm(id))
+    }
+    const  dislikeFilm = (id: number) =>{
+        dispatch(actions.dislikeFilm(id))
+    }
+
     return <div className={classes.eachFilm} >
           <div>
-              <img alt={'q'} src={props.large_cover_image} className={classes.png}/>
+              <img alt={'sorry image not found'} src={props.large_cover_image} className={classes.png}/>
           </div>
        <div>
 
-                 <h2> {props.name} <span className={classes.rating}> {props.rating} / 10 </span>  </h2>
+                 <h2> {props.name} {props.like && <span> 🧡 </span>} <span className={classes.rating}> {props.rating} / 10 </span>  </h2>
 
 
            <h4> {props.description}</h4>
            <h3 className={classes.des}> {d}</h3>
-           <button> like </button>
+           { !props.like && <button onClick={()=> likeFilm(props.id)}> like </button> }
+           { props.like && <button onClick={()=> dislikeFilm(props.id)}> dislike </button> }
            <button onClick={()=> deletePost(props.id)}> delete </button>
        </div>
 

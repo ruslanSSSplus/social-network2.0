@@ -25,7 +25,7 @@ export const Films: React.FC = () => {
     let filmsElements = films.map((el: FilmType) => <EachFilm rating={el.rating} genres={el.genres}
                                                               description={el.description_full}
                                                               large_cover_image={el.large_cover_image}
-                                                              key={el.id} id={el.id} name={el.title}/>)
+                                                              key={el.id} id={el.id} name={el.title} like={el.like}/>)
 
 
 

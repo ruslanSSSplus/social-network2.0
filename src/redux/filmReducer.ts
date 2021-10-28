@@ -2,8 +2,9 @@ import {InferActionsTypes} from "./reduxStore";
 import {filmAPI} from "../api/film-api";
 const SET_CURRENT_PAGE = 'FILMS/SET_CURRENT_PAGE'
 const ADD_FILM = 'FILMS/ADD_FILM';
-
 const DELETE_FILM = 'FILMS/DELETE_FILM'
+const LIKE_FILM = 'FILMS/LIKE_FILM'
+const DISLIKE_FILM = 'FILMS/DISLIKE_FILM'
 
 export type FilmType ={
     background_image: string
@@ -32,6 +33,7 @@ export type FilmType ={
 url: string
 year: number
 yt_trailer_code: string
+    like?: boolean
 }
 
 
@@ -55,6 +57,27 @@ const filmReducer = (state = initialState, action: ActionsType): initialStateTyp
         }
         case DELETE_FILM: {
             return {...state, films: state.films.filter((item: FilmType) => item.id !== action.idToRemove)}
+        }
+        case LIKE_FILM: {
+            let stateCopy = {...state}
+            stateCopy.films = [...state.films]
+            state.films.map((item: FilmType) => {
+                if ( item.id === action.id)
+                {
+                    item.like = true
+                    return item
+                }return item})
+                return stateCopy
+
+
+        }
+        case DISLIKE_FILM: {
+            return {...state, films: state.films.filter((item: FilmType) => {
+                if ( item.id === action.id){
+                    item.like = false
+                    return item
+                }return item
+                })}
 
         }
         default:
@@ -68,7 +91,12 @@ export const getFilmsThunkCreater = (pageNumber: number) => {
     return async (dispatch: any) => {
         dispatch(actions.setCurrentPage(pageNumber))
         const response = await filmAPI.getFilms(pageNumber)
-        await dispatch(actions.allFilms(response))
+        const response2 = response.map( (obj: FilmType) => {
+            obj.like = false;
+            return obj;
+        })
+        console.log(response2)
+        await dispatch(actions.allFilms(response2))
         }
     }
 
@@ -86,6 +114,14 @@ export const actions = {
     deleteFilm: (idToRemove: number) => ({
         type: DELETE_FILM,
         idToRemove
+    }as const),
+    likeFilm: (id: number) => ({
+        type: LIKE_FILM,
+        id
+    }as const),
+    dislikeFilm: (id: number) => ({
+        type: DISLIKE_FILM,
+        id
     }as const),
 }
 
