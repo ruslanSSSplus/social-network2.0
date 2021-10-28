@@ -22,3 +22,17 @@
 .des{
     color: grey;
 }
+.dislike{
+    color: black;
+    border-radius: 5px;
+
+}
+.like{
+    border-radius: 5px;
+    color: red
+}
+.delete{
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}

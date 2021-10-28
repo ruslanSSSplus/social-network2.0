@@ -52,9 +52,9 @@ const EachFilm: React.FC<propsType> = (props) => {
 
            <h4> {props.description}</h4>
            <h3 className={classes.des}> {d}</h3>
-           { !props.like && <button onClick={()=> likeFilm(props.id)}> like </button> }
-           { props.like && <button onClick={()=> dislikeFilm(props.id)}> dislike </button> }
-           <button onClick={()=> deletePost(props.id)}> delete </button>
+           { !props.like && <button onClick={()=> likeFilm(props.id)} className={classes.like}> like </button> }
+           { props.like && <button onClick={()=> dislikeFilm(props.id)} className={classes.dislike}> dislike </button> }
+           <button onClick={()=> deletePost(props.id)} className={classes.delete}> delete </button>
        </div>
 
 
