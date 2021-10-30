@@ -16,7 +16,12 @@
 
 5)In this component i did something like movie library
 
-![image](https://user-images.githubusercontent.com/88615370/136833747-4453153a-cdaf-419c-b3c9-6748e8a0ee86.png)
+![image](https://user-images.githubusercontent.com/88615370/139250208-e4b34265-896c-4856-a2ed-ee1de8ce728a.png)
+
+6)In this component i did something like google books
+
+![image](https://user-images.githubusercontent.com/88615370/139250291-b6144dc8-7fce-4367-93fe-7a5f03e01c68.png)
+
 
 =======================
 
