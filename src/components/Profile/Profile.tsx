@@ -6,6 +6,7 @@ import {ProfileType} from "../../Types/Types";
 
 
 
+
 type PropsType = {
     isError: boolean
     saveProfile: (profile: ProfileType) => Promise<any>
@@ -14,13 +15,15 @@ type PropsType = {
     profile: ProfileType | null,
     status: string
     updateStatusThunk: (status: string) => void
+
 }
 
 const Profile: React.FC<PropsType> = (props) => {
 
+
     return <div>
-        <ProfileInfo isError={props.isError}  saveProfile={props.saveProfile}  savePhoto={props.savePhoto} isOwner={props.isOwner}  profile={props.profile} status={props.status} updateStatusThunk={props.updateStatusThunk}/>
-        <MyPostsContainer />
+        <ProfileInfo  isError={props.isError}  saveProfile={props.saveProfile}  savePhoto={props.savePhoto} isOwner={props.isOwner}  profile={props.profile} status={props.status} updateStatusThunk={props.updateStatusThunk}/>
+      <MyPostsContainer />
     </div>
 }
 

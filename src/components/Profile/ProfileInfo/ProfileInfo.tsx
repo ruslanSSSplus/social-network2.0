@@ -4,6 +4,10 @@ import Preloader from "../../common/Preloder/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
 import {contactsType, ProfileType} from "../../../Types/Types";
+import {useSelector} from "react-redux";
+import {AppStateType} from "../../../redux/reduxStore";
+
+
 
 
 
@@ -23,6 +27,7 @@ const ProfileInfo: React.FC<PropsType> = ({profile ,status, updateStatusThunk, i
 
     let [editMode, setEditMode] = useState(false)
 
+    const gifka= useSelector((state: AppStateType) => state.profile.gif)
 
     if(!profile){
         return <Preloader />}
@@ -47,10 +52,17 @@ const ProfileInfo: React.FC<PropsType> = ({profile ,status, updateStatusThunk, i
 
     return <div>
       <div className={classes.description}>
+
         <div >
+            <span>
             <img className={classes.avatar} alt="avatar" src={ profile.photos.large === null ? 'https://i.pinimg.com/originals/26/a2/0a/26a20a99d83cf280fe907a14674c1ad6.png' : profile.photos.large }/>
             {isOwner && <input onChange={mainPhotoSelected} type={'file'}/>}
+                </span>
+            <span>
+                     <img src={gifka}  className={classes.gifka}/>
+            </span>
         </div>
+
           <div className={classes.info}>
               Status (дабл клик по статусу ниже и меняй)
           </div>

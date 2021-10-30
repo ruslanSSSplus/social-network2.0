@@ -1,7 +1,12 @@
 import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getProfileThunk, getStatusThunk, savePhoto, saveProfile, updateStatusThunk} from "../../redux/profileReducer";
+import {getProfileThunk,
+    getStatusThunk,
+    savePhoto,
+    saveProfile,
+    updateStatusThunk
+} from "../../redux/profileReducer";
 import {RouteComponentProps, withRouter} from 'react-router-dom'
 import {compose} from "redux";
 // import {withAuthRedirect} from "../../hoc/withAuthRedirect";
@@ -23,7 +28,6 @@ type MapDispatchPropsType = {
     getStatusThunk: (userId: number) => void
     updateStatusThunk: (status: string) => void
     saveProfile: (profile: ProfileType) => Promise<any>
-
 }
 
 type PathParamsType = {
@@ -50,7 +54,9 @@ class ProfileContainer extends React.Component<PropsType>{
 
 componentDidMount()
 {
+
     this.refreshProfile()
+
 }
 
 componentDidUpdate(prevProps: PropsType, prevState: AppStateType)
@@ -58,7 +64,6 @@ componentDidUpdate(prevProps: PropsType, prevState: AppStateType)
     if(this.props.match.params.userId !== prevProps.match.params.userId){
         this.refreshProfile()
     }
-
 }
 
 render()

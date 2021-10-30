@@ -4,6 +4,7 @@ import AddPostFormik from "../../AddPostForm/AddPostForm";
 import Post from "./Post/Post";
 import {PostsType} from "../../../Types/Types";
 
+
 export type MapStatePropsType = {
     posts: Array<PostsType>
 }
@@ -13,6 +14,9 @@ type MapDispatchPropsType = {
 }
 type PropsType = MapStatePropsType & MapDispatchPropsType
 const MyPosts: React.FC<PropsType> = (props)=> {
+
+
+
 
     let postDate = props.posts.map(el => <Post key={el.id} id={el.id} new={el.post} time={el.time} avatar={el.avatar} user={el.user} picture={el.picture} deletePost={props.deletePost}/>)
 

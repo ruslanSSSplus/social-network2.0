@@ -95,7 +95,6 @@ export const getFilmsThunkCreater = (pageNumber: number) => {
             obj.like = false;
             return obj;
         })
-        console.log(response2)
         await dispatch(actions.allFilms(response2))
         }
     }

@@ -42,9 +42,6 @@ const ccleaner = (data: any) => {
         } else if (!book.volumeInfo.hasOwnProperty('imageLinks')) {
             book.volumeInfo['imageLinks'] = {thumbnail: 'https://img3.akspic.ru/originals/2/8/8/7/4/147882-poni-rozovyj-liniya-kartinka-televideniye-750x1334.jpg'}
         }
-        console.log(1)
-
-        console.log(book.volumeInfo.imageLinks.thumbnail)
         return book;
     })
     return cleanedData

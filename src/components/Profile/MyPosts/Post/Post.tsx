@@ -14,6 +14,7 @@ type PropsType = {
 
 const Post: React.FC<PropsType> = (props) => {
 
+
     let deletePost = ()=>{
         props.deletePost(props.id)
     }
@@ -35,7 +36,7 @@ const Post: React.FC<PropsType> = (props) => {
         {props.new}
       </div>
     <div>
-      <img src={props.picture} className={classes.picture}  alt="avatar"/>
+      <img src={props.picture} className={classes.picture}  alt="picture"/>
         <button onClick={deletePost}> delete post </button>
     </div>
     </div>
