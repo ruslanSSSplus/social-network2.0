@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import classes from './MyPosts.module.css'
 import AddPostFormik from "../../AddPostForm/AddPostForm";
 import Post from "./Post/Post";
 import {PostsType} from "../../../Types/Types";
+import {
+    savePhoto,
+} from "../../../redux/profileReducer";
+
 
 
 export type MapStatePropsType = {
@@ -29,9 +33,11 @@ const MyPosts: React.FC<PropsType> = (props)=> {
             <h2>Create New Post </h2>
         </div>
         <AddPostFormik addPostActionCreator={props.addPostActionCreator}/>
+
         <div className={classes.posts}>
             {postDate}
         </div>
+
     </div>
 
 }

@@ -58,6 +58,6 @@ let mapStateToProps =(state: AppStateType) => {
 
 export default compose<React.ComponentType>(
     connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {unfollowThunk, getUsersThunk, ...actions}),
-    withAuthRedirect,
+   // withAuthRedirect,
 )(AllContainerHook)
 

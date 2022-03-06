@@ -12,6 +12,7 @@ import chatReducer from "./chatReducer";
 import filmReducer from "./filmReducer";
 import mainTestReducer from "./mainTest";
 import booksReducer from './books'
+import animeReducer from "./animeReducer";
 
 
 let rootReducer = combineReducers({
@@ -26,6 +27,7 @@ let rootReducer = combineReducers({
     chat: chatReducer,
     film: filmReducer,
     book: booksReducer,
+    anime: animeReducer,
 
 
     maintest: mainTestReducer

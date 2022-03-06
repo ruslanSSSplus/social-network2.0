@@ -15,12 +15,14 @@ import {compose} from "redux";
 import {initialiseApp} from "./redux/appReducer";
 import Preloader from "./components/common/Preloder/Preloader";
 
+
 import store, {AppStateType} from "./redux/reduxStore";
 import {Login} from "./components/Login/Login";
 
 
 import {Layout, Menu} from 'antd';
-import { SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined, MessageOutlined, WechatOutlined, SearchOutlined} from '@ant-design/icons';
+import { SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined, MessageOutlined,
+    WechatOutlined, SearchOutlined, BookOutlined, ZhihuOutlined, ReadOutlined} from '@ant-design/icons';
 
 import {HeaderComponent} from "./components/Header/Header";
 import {ChatPage} from "./pages/Chat/ChatPage";
@@ -29,6 +31,7 @@ import {FilmsContainer} from "./components/Films/FilmsContainer";
 import {MainPage} from "./components/TestRoute/mainPage";
 import {ProfilePage} from "./components/TestRoute/ProfilePage";
 import Books from "./components/Books/Books";
+import {AnimeContainer} from "./components/Anime/AnimeContainer";
 
 
 
@@ -92,13 +95,13 @@ class App extends React.Component<PropsType> {
                     <Menu   theme="dark" mode="inline" defaultSelectedKeys={['1']}>
 
                         <Menu.Item key="1" icon={<UserOutlined />}>
-                            <Link to = "/profile">My page</Link>
+                            <Link to = "/profile">My page (locked)</Link>
                         </Menu.Item>
-                        <Menu.Item key="2" icon={<VideoCameraOutlined />}>
+                        <Menu.Item key="2" icon={<BookOutlined />}>
                             <Link  to = '/news' >News</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<WechatOutlined />}>
-                            <Link to = '/chat' >Chat</Link>
+                            <Link to = '/chat' >Chat (locked)</Link>
 
                         </Menu.Item>
                         <Menu.Item key="4" icon={<UserOutlined />}>
@@ -110,18 +113,23 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="6" icon={<SoundOutlined />}>
                             <Link to = '/music' >Music</Link>
                         </Menu.Item>
-                        <Menu.Item key="7" icon={<MessageOutlined />}>
-                            <Link to = '/diallogs'>Messages</Link>
-                        </Menu.Item>
-                        <Menu.Item key="8" icon={<MessageOutlined />}>
+                        {/*<Menu.Item key="7" icon={<MessageOutlined />}>*/}
+                        {/*    <Link to = '/diallogs'>Messages (locked)</Link>*/}
+                        {/*</Menu.Item>*/}
+                        <Menu.Item key="8" icon={<VideoCameraOutlined />}>
                             <Link to = '/films'>Films</Link>
                         </Menu.Item>
-                        <Menu.Item key="9" icon={<MessageOutlined />}>
+                        <Menu.Item key="9" icon={<ReadOutlined />}>
                             <Link to = '/books'>Books</Link>
                         </Menu.Item>
-                        <Menu.Item key="10" icon={<MessageOutlined />}>
-                            <Link to = '/maintest'>Main</Link>
+                        {/*<Menu.Item key="10" icon={<MessageOutlined />}>*/}
+                        {/*    <Link to = '/maintest'>Main (locked)    </Link>*/}
+                        {/*</Menu.Item>*/}
+                        <Menu.Item key="11" icon={<ZhihuOutlined />}>
+                            <Link to = '/anime'>Anime</Link>
                         </Menu.Item>
+
+
 
                         {this.state.needWeather && <div className={classes.weather} onClick={() => {
                             this.setState({needWeather: false})
@@ -146,7 +154,6 @@ class App extends React.Component<PropsType> {
                             <Switch>
                                 <Route path='/chat'
                                        render={() => <ChatPage />}/>
-
 
                                 <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
 
@@ -173,7 +180,7 @@ class App extends React.Component<PropsType> {
                                 <Route path='/maintest' render={() => <MainPage />}/>
                                 <Route path='/profiletest' render={() => <ProfilePage />}/>
 
-
+                                <Route path='/Anime' render={() => <AnimeContainer />}/>
                                 <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
                                 <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>
 
