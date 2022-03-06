@@ -24,7 +24,7 @@ password: rastaman13
 
 ![image](https://user-images.githubusercontent.com/88615370/139250291-b6144dc8-7fce-4367-93fe-7a5f03e01c68.png)
 
-7) ANIME component is an anime library where you can find the desired anime. here i implemented search and pagination
+7)ANIME component is an anime library where you can find the desired anime. here i implemented search and pagination
 
 ![image](https://user-images.githubusercontent.com/88615370/156934118-8c98d60c-c8ad-4443-86cd-20190a18be19.png)
 
