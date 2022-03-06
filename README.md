@@ -1,4 +1,4 @@
-1)First of all u need to sign in. After that you will be able to see all the components
+1)First of all u need to sign in. After that you will be able to see all the components /// 
 login: ruslanlyanov1999@gmail.com
 password: rastaman13
 
