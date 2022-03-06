@@ -35,7 +35,7 @@ export const Anime: React.FC = () => {
     const handleSearch = (e: any) => {
         dispatch(actions.handleSearchAC(e.target.value))
     }
-    console.log(animes)
+   
     return (<div>
             <div className={classes.paginator}>
                 <Paginator currentPage={currentPage}
