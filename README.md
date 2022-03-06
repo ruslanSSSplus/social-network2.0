@@ -16,13 +16,18 @@ password: rastaman13
 
 ![image](https://user-images.githubusercontent.com/88615370/136833553-f7848810-b476-4964-9600-024473b08b4f.png)
 
-5)In this component i did something like movie library
+5)In this component i did something like movie library with pagination 
 
 ![image](https://user-images.githubusercontent.com/88615370/139250208-e4b34265-896c-4856-a2ed-ee1de8ce728a.png)
 
-6)In this component i did something like google books
+6)In this component i did something like google books with search
 
 ![image](https://user-images.githubusercontent.com/88615370/139250291-b6144dc8-7fce-4367-93fe-7a5f03e01c68.png)
+
+7) ANIME component is an anime library where you can find the desired anime. here i implemented search and pagination
+
+![image](https://user-images.githubusercontent.com/88615370/156934118-8c98d60c-c8ad-4443-86cd-20190a18be19.png)
+
 
 
 =======================
