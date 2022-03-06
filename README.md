@@ -5,8 +5,12 @@ password: rastaman13
 ![image](https://user-images.githubusercontent.com/88615370/136832869-bdc5066f-7633-4f5d-a54b-b5d841f75078.png)
 
 2) Here u can see profile page. All data can be changed and they will be saved on the server
+   All news from page are random gifs from api
+   Only avatar is a picture, everything else GIFs
 
-![image](https://user-images.githubusercontent.com/88615370/136833167-edae4937-4779-44c8-b3bd-40ce5c7fd826.png)
+![image](https://user-images.githubusercontent.com/88615370/156934403-c99d0c88-539b-4bb5-b023-a25ec668e5ab.png)
+![image](https://user-images.githubusercontent.com/88615370/156934427-7dfefad1-86b1-4e5b-9c2d-8cab4f558985.png)
+
 
 3) Here u can see chat. Also on the screenshot you can see the exact weather forecast
 
