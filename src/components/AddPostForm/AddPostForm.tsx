@@ -1,5 +1,5 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
-import classes from "../Profile/MyPosts/MyPosts.module.css";
+import classes from "../../pages/Profile/MyPosts/MyPosts.module.css";
 import React from "react";
 import * as Yup from 'yup'
 

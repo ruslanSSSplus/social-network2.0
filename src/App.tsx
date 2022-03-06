@@ -2,14 +2,14 @@ import React, {lazy, Suspense} from 'react';
 import './App.module.css';
 import 'antd/dist/antd.css';
 import {HashRouter, Link, Route, Switch, withRouter} from 'react-router-dom'
-import Friends from "./components/Friends/Friends";
-import GenaProfile from "./components/ProfileGena/GenaProfile";
+import Friends from "./pages/Friends/Friends";
+import GenaProfile from "./pages/ProfileGena/GenaProfile";
 import NikitaProfile from "./components/NikitaProfile";
-import DiallogsContainer from "./components/Diallogs/DiallogsContainer";
-import NewsContainer from "./components/News/NewsContainer";
+import DiallogsContainer from "./pages/Diallogs/DiallogsContainer";
+import NewsContainer from "./pages/News/NewsContainer";
 import classes from './App.module.css'
-import  {UsersPage} from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
+import  {UsersPage} from "./pages/Users/UsersContainer";
+import ProfileContainer from "./pages/Profile/ProfileContainer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initialiseApp} from "./redux/appReducer";
@@ -17,7 +17,7 @@ import Preloader from "./components/common/Preloder/Preloader";
 
 
 import store, {AppStateType} from "./redux/reduxStore";
-import {Login} from "./components/Login/Login";
+import {Login} from "./pages/Login/Login";
 
 
 import {Layout, Menu} from 'antd';
@@ -26,12 +26,12 @@ import { SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined, Messag
 
 import {HeaderComponent} from "./components/Header/Header";
 import {ChatPage} from "./pages/Chat/ChatPage";
-import {WeatherContainer} from "./components/Weather/WeatherContainer";
-import {FilmsContainer} from "./components/Films/FilmsContainer";
-import {MainPage} from "./components/TestRoute/mainPage";
-import {ProfilePage} from "./components/TestRoute/ProfilePage";
-import Books from "./components/Books/Books";
-import {AnimeContainer} from "./components/Anime/AnimeContainer";
+import {WeatherContainer} from "./pages/Weather/WeatherContainer";
+import {FilmsContainer} from "./pages/Films/FilmsContainer";
+import {MainPage} from "./pages/TestRoute/mainPage";
+import {ProfilePage} from "./pages/TestRoute/ProfilePage";
+import Books from "./pages/Books/Books";
+import {AnimeContainer} from "./pages/Anime/AnimeContainer";
 
 
 
@@ -41,7 +41,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 // import MusicContainer from "./components/Music/MusicContainer";
-const MusicContainer = lazy(() => import('./components/Music/MusicContainer'));
+const MusicContainer = lazy(() => import('./pages/Music/MusicContainer'));
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {

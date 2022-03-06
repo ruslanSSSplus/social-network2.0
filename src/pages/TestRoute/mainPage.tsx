@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import classes from "../TestRoute/mainAndProfilePages.module.css";
+import classes from "./mainAndProfilePages.module.css";
 import {Redirect} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../redux/reduxStore";

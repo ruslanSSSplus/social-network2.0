@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {FilmType, getFilmsThunkCreater} from "../../redux/filmReducer";
 import {AppStateType} from "../../redux/reduxStore";
 import EachFilm from "./eachFilm";
-import Paginator from "../Paginator/Paginator";
+import Paginator from "../../components/Paginator/Paginator";
 import classes from "./Films.module.css";
 
 

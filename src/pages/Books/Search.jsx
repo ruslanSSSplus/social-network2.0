@@ -1,5 +1,5 @@
 import React from "react";
-import classes from '../Books/books.module.css'
+import classes from './books.module.css'
 
 const Search = (props) => {
     return (<form action='' onSubmit={props.searchBook} className={classes.form} >

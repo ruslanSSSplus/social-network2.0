@@ -1,6 +1,6 @@
 import React, {ChangeEvent} from 'react';
 import classes from './MyPosts.module.css'
-import AddPostFormik from "../../AddPostForm/AddPostForm";
+import AddPostFormik from "../../../components/AddPostForm/AddPostForm";
 import Post from "./Post/Post";
 import {PostsType} from "../../../Types/Types";
 import {

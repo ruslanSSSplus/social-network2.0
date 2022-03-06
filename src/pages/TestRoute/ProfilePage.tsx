@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import classes from "../TestRoute/mainAndProfilePages.module.css";
+import classes from "./mainAndProfilePages.module.css";
 import {useSelector} from "react-redux";
 import {AppStateType} from "../../redux/reduxStore";
 

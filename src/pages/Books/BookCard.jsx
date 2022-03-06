@@ -1,18 +1,18 @@
 import React from "react";
-import classes from '../Books/books.module.css'
+import classes from './books.module.css'
 
 
 const BookCard = (props) => {
-    return (<div className={classes.full}>
-        <img src={props.image} alt='a' className={classes.ava}/>
-        <div>
-            <h2  className={classes.info}>
+    return (<div className={classes.eachBook}>
+        <div> <img src={props.image} alt='a' className={classes.ava}/></div>
+        <div className={classes.info}>
+            <h2  >
                 {props.title}
             </h2>
-            <h3  className={classes.info}>
+            <h3  >
               Author:  {props.author}
             </h3>
-            <p  className={classes.info}>
+            <p >
               Published data:  {props.published === '0000' ? 'Not available' : props.published.substring(0, 4)}
             </p>
         </div>

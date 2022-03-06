@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import EachUser from "./EachUser";
-import Paginator from "../Paginator/Paginator";
+import Paginator from "../../components/Paginator/Paginator";
 
 
 import {FilterType, followThunk, getUsersThunkCreater, unfollowThunk} from "../../redux/friendsReducer";

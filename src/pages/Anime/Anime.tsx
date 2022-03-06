@@ -3,10 +3,10 @@ import {useDispatch, useSelector} from "react-redux";
 import {AnimesType, getAnimesThunkCreater, actions} from "../../redux/animeReducer";
 import {AppStateType} from "../../redux/reduxStore";
 
-import Paginator from "../Paginator/Paginator";
+import Paginator from "../../components/Paginator/Paginator";
 import classes from "./Anime.module.css";
-import EachAnime from "../Anime/eachAnime";
-import Search from "../Anime/SearchAnime";
+import EachAnime from "./eachAnime";
+import Search from "./SearchAnime";
 
 
 export const Anime: React.FC = () => {
@@ -35,7 +35,7 @@ export const Anime: React.FC = () => {
     const handleSearch = (e: any) => {
         dispatch(actions.handleSearchAC(e.target.value))
     }
-   
+
     return (<div>
             <div className={classes.paginator}>
                 <Paginator currentPage={currentPage}

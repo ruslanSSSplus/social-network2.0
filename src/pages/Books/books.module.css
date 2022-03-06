@@ -1,0 +1,35 @@
+.full{
+    margin: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    width: 100%;
+
+}
+.form{
+
+}
+.ava{
+
+    margin: 20px;
+    width: 128px;
+    height: 166px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.info
+{
+    margin-top: 20px;
+}
+.eachBook{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    grid-template-areas:
+    'a i';
+
+    grid-template-columns: 200px 1fr ;
+    grid-gap: 15px;
+
+    background: linear-gradient(to right, white, pink);
+}
+

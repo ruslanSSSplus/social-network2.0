@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
-import Preloader from "../common/Preloder/Preloader";
+import Preloader from "../../components/common/Preloder/Preloader";
 import {getisFetching} from "../../redux/friendsSelectors";
 import {Users} from "./Users";
 

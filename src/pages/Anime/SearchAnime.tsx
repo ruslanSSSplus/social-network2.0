@@ -1,7 +1,12 @@
 import React from "react";
-import classes from '../Anime/Anime.module.css'
+import classes from './Anime.module.css'
 
-const Search = (props) => {
+type propsType = {
+    searchAnime: (e: any) => void
+    handleSearch: (e: any) => void
+}
+
+const Search: React.FC<propsType> = (props) => {
     return (<form action='' onSubmit={props.searchAnime} className={classes.form} >
         <input type='text' onChange={props.handleSearch}/>
         <button type='submit'>
