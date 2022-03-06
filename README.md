@@ -4,9 +4,9 @@ password: rastaman13
 
 ![image](https://user-images.githubusercontent.com/88615370/136832869-bdc5066f-7633-4f5d-a54b-b5d841f75078.png)
 
-2) Here u can see profile page. All data can be changed and they will be saved on the server
-   All news from page are random gifs from api
-   Only avatar is a picture, everything else GIFs
+2) Here u can see profile page. All data can be changed and they will be saved on the server.
+   All news from page are random gifs from api.
+   Only avatar is a picture, everything else GIFs.
    
 ![image](https://user-images.githubusercontent.com/88615370/156934557-8c55b9f9-afbd-42e5-a646-f727018700bf.png)
 ![image](https://user-images.githubusercontent.com/88615370/156934560-a7a1569a-46de-437d-a402-2c0aef902e7d.png)
