@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/social-network2.0/static/css/main.acaf3a09.chunk.css",
+    "main.css": "/social-network2.0/static/css/main.00eecfd6.chunk.css",
     "main.js": "/social-network2.0/static/js/main.92379f66.chunk.js",
     "main.js.map": "/social-network2.0/static/js/main.92379f66.chunk.js.map",
     "runtime-main.js": "/social-network2.0/static/js/runtime-main.8e262f9f.js",
@@ -16,7 +16,7 @@
     "index.html": "/social-network2.0/index.html",
     "static/css/2.a95be28f.chunk.css.map": "/social-network2.0/static/css/2.a95be28f.chunk.css.map",
     "static/css/3.ac1912a1.chunk.css.map": "/social-network2.0/static/css/3.ac1912a1.chunk.css.map",
-    "static/css/main.acaf3a09.chunk.css.map": "/social-network2.0/static/css/main.acaf3a09.chunk.css.map",
+    "static/css/main.00eecfd6.chunk.css.map": "/social-network2.0/static/css/main.00eecfd6.chunk.css.map",
     "static/js/2.2dac5c83.chunk.js.LICENSE.txt": "/social-network2.0/static/js/2.2dac5c83.chunk.js.LICENSE.txt",
     "static/media/04de2e31234507.564a1d23645bf.1cbc65b1.gif": "/social-network2.0/static/media/04de2e31234507.564a1d23645bf.1cbc65b1.gif",
     "static/media/DZIAss-5O_I.d5bd3e11.jpg": "/social-network2.0/static/media/DZIAss-5O_I.d5bd3e11.jpg"
@@ -25,7 +25,7 @@
     "static/js/runtime-main.8e262f9f.js",
     "static/css/2.a95be28f.chunk.css",
     "static/js/2.2dac5c83.chunk.js",
-    "static/css/main.acaf3a09.chunk.css",
+    "static/css/main.00eecfd6.chunk.css",
     "static/js/main.92379f66.chunk.js"
   ]
 }
