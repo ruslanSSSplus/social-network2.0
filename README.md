@@ -1,4 +1,6 @@
 1)First of all u need to sign in. After that you will be able to see all the components
+login: ruslanlyanov1999@gmail.com
+password: rastaman13
 
 ![image](https://user-images.githubusercontent.com/88615370/136832869-bdc5066f-7633-4f5d-a54b-b5d841f75078.png)
 
