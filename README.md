@@ -1,7 +1,7 @@
 Link to site
 https://ruslansssplus.github.io/social-network2.0/#/profile
 
-1) First of all u need to sign in. After that you will be able to see all the pages ///. 
+1) First of all u need to sign in. After that you will be able to see all the pages ////  
 login: ruslanlyanov1999@gmail.com
 password: rastaman13
 
