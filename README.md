@@ -1,5 +1,5 @@
 Link to site
-https://ruslansssplus.github.io/social-network2.0/#/profile
+https://ruslansssplus.github.io/social-network2.0/#/anime
 
 1) First of all u need to sign in. After that you will be able to see all the pages ////  
 login: ruslanlyanov1999@gmail.com
