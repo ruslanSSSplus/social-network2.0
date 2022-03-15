@@ -15,7 +15,7 @@ import {ChatMessageAPIType} from "../../api/chat-api";
 
 export const ChatPage: React.FC =() => {
 
-    return <div>
+    return <div className={classes.all}>
     <Chat />
     </div>
 

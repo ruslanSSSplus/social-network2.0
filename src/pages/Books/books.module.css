@@ -32,4 +32,6 @@
 
     background: linear-gradient(to right, white, pink);
 }
-
+.all{
+    padding: 20px;
+}

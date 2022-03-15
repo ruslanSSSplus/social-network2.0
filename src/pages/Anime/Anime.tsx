@@ -36,7 +36,7 @@ export const Anime: React.FC = () => {
         dispatch(actions.handleSearchAC(e.target.value))
     }
 
-    return (<div>
+    return (<div className={classes.all}>
             <div className={classes.paginator}>
                 <Paginator currentPage={currentPage}
                            totalItemsCount={500}

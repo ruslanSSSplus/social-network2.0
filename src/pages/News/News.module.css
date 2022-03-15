@@ -1,6 +1,6 @@
 .content{
     grid-area: c;
-
+    padding-left: 20px;
 }
 .textarea
 {

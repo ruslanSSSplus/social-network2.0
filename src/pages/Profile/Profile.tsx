@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import {ProfileType} from "../../Types/Types";
-
+import classes from './Profile.module.css'
 
 
 
@@ -21,7 +21,7 @@ type PropsType = {
 const Profile: React.FC<PropsType> = (props) => {
 
 
-    return <div>
+    return <div className={classes.all}>
         <ProfileInfo  isError={props.isError}  saveProfile={props.saveProfile}  savePhoto={props.savePhoto} isOwner={props.isOwner}  profile={props.profile} status={props.status} updateStatusThunk={props.updateStatusThunk}/>
       <MyPostsContainer />
     </div>

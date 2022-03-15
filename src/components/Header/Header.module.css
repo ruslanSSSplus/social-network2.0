@@ -6,8 +6,10 @@
 }
 
 .button1 {
-    color: red;
-
+    color: blue;
+   font-size: 20px;
+    height: 50px;
+    margin-right: 5px;
 }
 .header img.logo{
   width: 160px;
@@ -20,7 +22,6 @@
 }
 .signIn
 {
-
     margin-right: 20px;
     font-size: 25px;
 }
@@ -30,8 +31,10 @@
 }
 .userAvatar
 {
+    margin-top: 5px;
+
     float: right;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

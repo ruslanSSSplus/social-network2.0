@@ -32,6 +32,7 @@ import {MainPage} from "./pages/TestRoute/mainPage";
 import {ProfilePage} from "./pages/TestRoute/ProfilePage";
 import Books from "./pages/Books/Books";
 import {AnimeContainer} from "./pages/Anime/AnimeContainer";
+import PopUpSlider from "./pages/PopUpSlider/PopUpSlider";
 
 
 
@@ -128,7 +129,9 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="11" icon={<ZhihuOutlined />}>
                             <Link to = '/anime'>Anime</Link>
                         </Menu.Item>
-
+                        <Menu.Item key="12" icon={<ZhihuOutlined />}>
+                            <Link to = '/PopUpSlider'>PopUpSlider</Link>
+                        </Menu.Item>
 
 
                         {this.state.needWeather && <div className={classes.weather} onClick={() => {
@@ -149,8 +152,8 @@ class App extends React.Component<PropsType> {
                     <Header className="site-layout-sub-header-background" style={{padding: 0, height: 68}}>
                         <HeaderComponent/>
                     </Header>
-                    <Content style={{margin: '15px 16px 0'}}>
-                        <div className="site-layout-background" style={{padding: 20, minHeight: 360}}>
+                    <Content style={{margin: '0 0 0'}}>
+                        <div className="site-layout-background" style={{padding: 0, minHeight: 360}}>
                             <Switch>
                                 <Route path='/chat'
                                        render={() => <ChatPage />}/>
@@ -179,6 +182,7 @@ class App extends React.Component<PropsType> {
 
                                 <Route path='/maintest' render={() => <MainPage />}/>
                                 <Route path='/profiletest' render={() => <ProfilePage />}/>
+                                <Route path='/PopUpSlider' render={() => <PopUpSlider />}/>
 
                                 <Route path='/Anime' render={() => <AnimeContainer />}/>
                                 <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>

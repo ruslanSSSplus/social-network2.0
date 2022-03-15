@@ -3,7 +3,7 @@ import Search from "./Search";
 import BookList from "./BookList";
 import {useDispatch, useSelector} from "react-redux";
 import {actions, getBooksThunkCreater, searchBookThunkCreater} from "../../redux/books";
-
+import classes from './books.module.css'
 
 
 
@@ -44,7 +44,7 @@ import {actions, getBooksThunkCreater, searchBookThunkCreater} from "../../redux
     })
 
     return (
-        <div>
+        <div className={classes.all}>
             <Search searchBook={searchBook} handleSearch={handleSearch} handleSort={handleSort}/>
             <BookList books={sortedBooks}/>
         </div>

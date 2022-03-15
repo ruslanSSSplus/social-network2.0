@@ -1,7 +1,7 @@
-/*.content{*/
-/*    grid-area: c;*/
-/*    background-color: rgb(190, 204, 229);*/
-/*}*/
+.content{
+    grid-area: c;
+    padding: 20px;
+}
 .song
 {
     padding: 10px;

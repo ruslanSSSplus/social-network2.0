@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import EachUser from "./EachUser";
 import Paginator from "../../components/Paginator/Paginator";
-
+import classes from "./users.module.css";
 
 import {FilterType, followThunk, getUsersThunkCreater, unfollowThunk} from "../../redux/friendsReducer";
 import {useDispatch, useSelector} from "react-redux";
@@ -84,7 +84,7 @@ export const Users: React.FC<PropsType> = (props) => {
         dispatch(followThunk(id, photo, name))
     }
 
-    return <div>
+    return <div className={classes.all}>
         <UsersSearchForm onFilterChanged={onFilterChanged}/>
 
         <Paginator currentPage={currentPage}
