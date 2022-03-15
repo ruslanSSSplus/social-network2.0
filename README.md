@@ -5,37 +5,39 @@ https://ruslansssplus.github.io/social-network2.0/#/anime
 login: ruslanlyanov1999@gmail.com
 password: rastaman13
 
-![image](https://user-images.githubusercontent.com/88615370/136832869-bdc5066f-7633-4f5d-a54b-b5d841f75078.png)
+![image](https://user-images.githubusercontent.com/88615370/158442955-e13d8540-5a9c-4831-bfc1-3b9b33bbe98a.png)
 
 2) Here u can see profile page. All data can be changed and they will be saved on the server.
    All news from page are random gifs from api.
    Only avatar is a picture, everything else GIFs.
    
-![image](https://user-images.githubusercontent.com/88615370/156934557-8c55b9f9-afbd-42e5-a646-f727018700bf.png)
-![image](https://user-images.githubusercontent.com/88615370/156934560-a7a1569a-46de-437d-a402-2c0aef902e7d.png)
+![image](https://user-images.githubusercontent.com/88615370/158443222-24ea6877-6d12-4447-a7d3-da9a86a99ccd.png)
+![image](https://user-images.githubusercontent.com/88615370/158443323-39edb97d-b83e-4389-9489-2d2f1953d6e9.png)
 
 
 3) Here u can see chat. Also on the screenshot you can see the exact weather forecast
 
-![image](https://user-images.githubusercontent.com/88615370/136833475-facc2b61-761e-45f3-99ab-1e6f1336f78f.png)
+![image](https://user-images.githubusercontent.com/88615370/158443556-6de3cf28-9592-454f-a004-68fe2f2bdb1c.png)
 
 4) All users are visible in this screenshot, pagination and filters are present
-
-![image](https://user-images.githubusercontent.com/88615370/136833553-f7848810-b476-4964-9600-024473b08b4f.png)
+![image](https://user-images.githubusercontent.com/88615370/158443630-9841a1a3-eef2-4365-a5d1-368eaa0b48c6.png)
 
 5) In this component i did something like movie library with pagination 
 
-![image](https://user-images.githubusercontent.com/88615370/156937168-735b7a60-25ac-48dc-b89a-bc382c3538dc.png)
+![image](https://user-images.githubusercontent.com/88615370/158443684-6610c39a-dded-4781-b4b4-14763c77ba42.png)
 
 6) In this component i did something like google books with search
 
-![image](https://user-images.githubusercontent.com/88615370/156937176-1d88edf9-e39d-4587-a40c-0a36a08e86ca.png)
+![image](https://user-images.githubusercontent.com/88615370/158443735-5b22a4ca-63e1-47df-9050-6baa3b5f7cc3.png)
 
 7) ANIME component is an anime library where you can find the desired anime. Here i implemented search and pagination
 
-![image](https://user-images.githubusercontent.com/88615370/156937187-ae66d069-07a4-416e-bd4b-4b3ab5b8c8fe.png)
-![image](https://user-images.githubusercontent.com/88615370/156937195-64dbca3a-e5ff-417d-b7e4-38cb13136ea6.png)
+![image](https://user-images.githubusercontent.com/88615370/158443784-49ee05d3-d5e9-477a-9924-937344fb8bde.png)
+![image](https://user-images.githubusercontent.com/88615370/158443850-52d68ab3-0359-4bd8-82cd-45922878fac2.png)
 
+8) Here u can see popUp Slider. Also on the screenshot you can see the exact weather forecast. Weather forecast takes your geolocation and gives you the current weather.
+![image](https://user-images.githubusercontent.com/88615370/158444304-48a5bd05-ffca-448f-ba8c-068cd7828c71.png)
+![image](https://user-images.githubusercontent.com/88615370/158444342-7b326233-c68a-48be-b33c-3b9cfbe71e7c.png)
 
 
 =======================
@@ -50,7 +52,7 @@ Libraries i used
 7) yup
 8) classnames
 9) querystring
-
+10) cn
 =======================
 
 To install you need 
