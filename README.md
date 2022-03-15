@@ -3,7 +3,7 @@ https://ruslansssplus.github.io/social-network2.0/#/anime
 
 1) First of all u need to sign in. After that you will be able to see all the pages ////  
 login: ruslanlyanov1999@gmail.com
-password: rastaman13
+password: qwerty123
 
 ![image](https://user-images.githubusercontent.com/88615370/158442955-e13d8540-5a9c-4831-bfc1-3b9b33bbe98a.png)
 
