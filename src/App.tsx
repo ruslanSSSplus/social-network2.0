@@ -33,7 +33,7 @@ import {ProfilePage} from "./pages/TestRoute/ProfilePage";
 import Books from "./pages/Books/Books";
 import {AnimeContainer} from "./pages/Anime/AnimeContainer";
 import PopUpSlider from "./pages/PopUpSlider/PopUpSlider";
-
+// import logo from "./assets/images/pngwing.com.png"
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -74,8 +74,9 @@ class App extends React.Component<PropsType> {
 
 
         return (
-            <Layout>
+            <Layout >
                 <Sider
+                    style={{background: '#98bfad', height: '500px'}}
                     className="menuShadow"
                     breakpoint="lg"
                     collapsedWidth="0"
@@ -89,11 +90,11 @@ class App extends React.Component<PropsType> {
 
 
                     <div className={classes.logo}>
-                        <img className={classes.logo1} src="https://avatanplus.com/files/resources/original/5bf6f0c0b38e91673c9c70df.png" alt={'logo'}/>
+                        <img className={classes.logo1} src='https://sun9-3.userapi.com/impf/sbA1-MxKfR9FziylJZeSfg-hNv9DwySyt8Qn1Q/pp_Bmo1uZ7I.jpg?size=237x173&quality=95&sign=ceafa2f1a605e6f8ea3539cd4bac2fa0&type=album' alt={'logo'}/>
                     </div>
 
 
-                    <Menu   theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+                    <Menu   mode="inline" defaultSelectedKeys={['1']} style={{ background: "linear-gradient(#98bfad, #ff907c)", }} >
 
                         <Menu.Item key="1" icon={<UserOutlined />}>
                             <Link to = "/profile">My page (locked)</Link>
@@ -134,25 +135,24 @@ class App extends React.Component<PropsType> {
                         </Menu.Item>
 
 
-                        {this.state.needWeather && <div className={classes.weather} onClick={() => {
-                            this.setState({needWeather: false})
-                            console.log(this.state.needWeather)
+                        {!this.state.needWeather && <div className={classes.weather} onClick={() => {
+                            this.setState({needWeather: true})
                         }}>
                             <WeatherContainer/>
                         </div>}
-                        {!this.state.needWeather &&  <Menu.Item key="9" icon={<CloudOutlined />} onClick={() => {
-                            this.setState({needWeather: true})
-                            console.log(this.state.needWeather)
+                        {this.state.needWeather &&  <Menu.Item key="15" icon={<CloudOutlined />} onClick={() => {
+                            this.setState({needWeather: false})
+
                         }}>
                            Weather
                         </Menu.Item>}
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header className="site-layout-sub-header-background" style={{padding: 0, height: 68}}>
+                    <Header className="site-layout-sub-header-background" style={{padding: 0, height: 68, background: "linear-gradient(to right, #98bfad, #ffc4b2)"}} >
                         <HeaderComponent/>
                     </Header>
-                    <Content style={{margin: '0 0 0'}}>
+                    <Content >
                         <div className="site-layout-background" style={{padding: 0, minHeight: 360}}>
                             <Switch>
                                 <Route path='/chat'
@@ -191,7 +191,7 @@ class App extends React.Component<PropsType> {
                             </Switch>
                         </div>
                     </Content>
-                    <Footer style={{textAlign: 'center'}}>Social-network 2.0 ©2021 Created by Ruslan SSS Ghoul</Footer>
+                     {/*<Footer style={{textAlign: 'center'}}>Social-network 2.0 ©2021 Created by Ruslan SSS Ghoul</Footer>*/}
                 </Layout>
             </Layout>
 

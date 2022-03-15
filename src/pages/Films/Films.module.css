@@ -25,16 +25,13 @@
 .dislike{
     color: black;
     border-radius: 5px;
-
 }
 .like{
     border-radius: 5px;
-    color: red
 }
 .delete{
+    color: red;
     border-radius: 5px;
-    background-color: red;
-    color: white;
     margin-left: 5px;
 }
 .all{
