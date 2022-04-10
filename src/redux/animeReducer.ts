@@ -92,13 +92,6 @@ export const getAnimesThunkCreater = (pageNumber: number, searchField: string) =
         }
     }
 
-// export const searchAnimeThunkCreater = (searchField: string) => {
-//     return async (dispatch: any) => {
-//         let data = await animeAPI.getExactAnime(searchField)
-//         dispatch(actions.addAnimes(data))
-//     }
-// }
-
 
 export const actions = {
     allAnimes: (animes: Array<AnimesType>)  => ({

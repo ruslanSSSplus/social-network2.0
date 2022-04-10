@@ -1,4 +1,6 @@
 import {applyMiddleware, combineReducers, createStore, compose, Action} from "redux";
+import thunkMiddleware, {ThunkAction} from 'redux-thunk'
+
 import profileReducer from "./profileReducer";
 import dialogReducer from "./dialogReducer";
 import musicReducer from "./musicReducer";
@@ -6,7 +8,6 @@ import friendsReducer from "./friendsReducer";
 import sideBarReducer from "./sideBarReducer";
 import newsReducer from "./newsReducer";
 import authReducer from "./authReducer";
-import thunkMiddleware, {ThunkAction} from 'redux-thunk'
 import appReducer from "./appReducer";
 import chatReducer from "./chatReducer";
 import filmReducer from "./filmReducer";
