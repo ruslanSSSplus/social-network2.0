@@ -19,6 +19,8 @@ import NikitaProfile from "../components/NikitaProfile";
 import MusicContainer from "../pages/Music/MusicContainer";
 import {BeerInt} from "../pages/NewProject/BeerInt";
 
+import {TestContainer} from "../pages/Test/TestContainer";
+
 export const AllRoutes = () => {
 
 
@@ -57,6 +59,8 @@ export const AllRoutes = () => {
             <Route path='/https://vk.com/dank_af' render={() => <GenaProfile/>}/>
             <Route path='/https://vk.com/id153839551' render={() => <NikitaProfile/>}/>
             <Route path='/BeerTernational' render={() => <BeerInt />}/>
+
+            <Route path='/Test' render={() => <TestContainer />}/>
 
         </Switch>
     );

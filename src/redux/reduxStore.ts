@@ -14,6 +14,7 @@ import filmReducer from "./filmReducer";
 import mainTestReducer from "./mainTest";
 import booksReducer from './books'
 import animeReducer from "./animeReducer";
+import testReducer from "./testReducer";
 
 
 let rootReducer = combineReducers({
@@ -30,7 +31,7 @@ let rootReducer = combineReducers({
     book: booksReducer,
     anime: animeReducer,
 
-
+    test: testReducer,
     maintest: mainTestReducer
 })
 
