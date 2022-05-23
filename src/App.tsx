@@ -122,7 +122,9 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="18" icon={<ZhihuOutlined/>}>
                             <Link to='/Test'>Test</Link>
                         </Menu.Item>
-
+                        <Menu.Item key="19" icon={<ZhihuOutlined/>}>
+                            <Link to='/DataPicker'>DataPicker</Link>
+                        </Menu.Item>
                         {!this.state.needWeather && <div className={classes.weather} onClick={() => {
                             this.setState({needWeather: true})
                         }}>

@@ -20,6 +20,7 @@ import MusicContainer from "../pages/Music/MusicContainer";
 import {BeerInt} from "../pages/NewProject/BeerInt";
 
 import {TestContainer} from "../pages/Test/TestContainer";
+import DataPicker from "../pages/DataPicker/DatePicker";
 
 export const AllRoutes = () => {
 
@@ -61,6 +62,7 @@ export const AllRoutes = () => {
             <Route path='/BeerTernational' render={() => <BeerInt />}/>
 
             <Route path='/Test' render={() => <TestContainer />}/>
+            <Route path='/DataPicker' render={() => <DataPicker />}/>
 
         </Switch>
     );
