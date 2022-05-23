@@ -7,12 +7,12 @@ import {v1} from 'uuid'
 const DatePicker = () => {
 
     const select = (i) => {
-
         setSelectedDay(i);
         setSelectedMonth(month);
         setSelectedYear(year);
-        setSelected_date_element(formatDate(new Date(year + '-' + (month + 1) + '-' + (i))));
-        setAllSelectedDates([...allSelectedDates, (formatDate(new Date(year + '-' + (month + 1) + '-' + (i))))])
+        let a = formatDate(new Date(year + '-' + (month + 1) + '-' + (i)))
+        setSelected_date_element(a);
+        setAllSelectedDates([...allSelectedDates, a])
         populateDates();
     }
 
@@ -33,7 +33,7 @@ const DatePicker = () => {
     const [selectedMonth, setSelectedMonth] = useState(month);
     const [selectedYear, setSelectedYear] = useState(year);
     const [selectedDay, setSelectedDay] = useState(day);
-    const [allSelectedDates, setAllSelectedDates] = useState( [] );
+    const [allSelectedDates, setAllSelectedDates] = useState([]);
 
 
     let days_element = [];
@@ -42,7 +42,7 @@ const DatePicker = () => {
     populateDates();
 
 
-    useEffect(() =>{
+    useEffect(() => {
         console.log(selected_date_element)
     }, [selected_date_element])
 
@@ -55,8 +55,6 @@ const DatePicker = () => {
             setMonth(m + 1);
             setMth_element(months[m + 1] + ' ' + y);
         }
-
-
         populateDates();
     }
 
@@ -69,7 +67,6 @@ const DatePicker = () => {
             setMonth(m - 1);
             setMth_element(months[m - 1] + ' ' + y)
         }
-
         populateDates();
     }
 
@@ -83,14 +80,11 @@ const DatePicker = () => {
         }
 
         for (let i = 0; i < amount_days; i++) {
-
             if (selectedDay === (i + 1) && selectedYear === year && selectedMonth === month) {
                 days_element.push(<Days day={i + 1} isSelected={true} select={select} key={v1()}/>)
             } else {
                 days_element.push(<Days day={i + 1} isSelected={false} select={select} key={v1()}/>)
             }
-
-
         }
     }
 
@@ -118,7 +112,7 @@ const DatePicker = () => {
             </div>
             <hr/>
             {hide ? null :
-                <div >
+                <div>
                     <div className={classes.month}>
                         <span onClick={() => goToPrevMonth(month, year)} className={classes.prev}>&lt;</span>
                         <span className={classes.exactDate}>   {mth_element}  </span>
@@ -131,7 +125,7 @@ const DatePicker = () => {
 
         <div className={classes.allDates}>
             <h3> Выбранные даты</h3>
-            { allSelectedDates.map((el) => <div key={v1()}>
+            {allSelectedDates.map((el) => <div key={v1()}>
                 {el}
             </div>)
             }
