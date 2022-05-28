@@ -13,7 +13,8 @@ import store, {AppStateType} from "./redux/reduxStore";
 import {Layout, Menu} from 'antd';
 import {
     SoundOutlined, UserOutlined, VideoCameraOutlined, CloudOutlined,
-    WechatOutlined, SearchOutlined, BookOutlined, ZhihuOutlined, ReadOutlined, FireOutlined
+    WechatOutlined, SearchOutlined, BookOutlined, ZhihuOutlined, ReadOutlined, FireOutlined,
+    CalendarOutlined, GithubOutlined
 } from '@ant-design/icons';
 
 import {HeaderComponent} from "./components/Header/Header";
@@ -122,8 +123,11 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="18" icon={<ZhihuOutlined/>}>
                             <Link to='/Test'>Test</Link>
                         </Menu.Item>
-                        <Menu.Item key="19" icon={<ZhihuOutlined/>}>
+                        <Menu.Item key="19" icon={<CalendarOutlined />}>
                             <Link to='/DataPicker'>DataPicker</Link>
+                        </Menu.Item>
+                        <Menu.Item key="20" icon={<GithubOutlined />}>
+                            <Link to='/Cats'>Cats</Link>
                         </Menu.Item>
                         {!this.state.needWeather && <div className={classes.weather} onClick={() => {
                             this.setState({needWeather: true})
