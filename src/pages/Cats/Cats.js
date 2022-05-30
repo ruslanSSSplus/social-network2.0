@@ -39,7 +39,6 @@ export const Cats = () => {
             </div>
             <span>
                 <Link to="/FavoriteCats" className={classes.goToFav}>Любимые котики</Link>
-            {/*<button className={classes.goToFav}>  <Link to="/FavoriteCats"> Любимые котики</Link> </button>*/}
                 {/* сделал бы через useNavigate, но проект старый, в нем старая версия реакт роутер дом. */}
         </span>
         </div>
