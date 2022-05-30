@@ -1,24 +1,39 @@
-.cat{
-    width: 400px;
-    height: 400px;
-    margin: 30px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.cat {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.all{
+
+.all {
+    margin-top: 20px;
+    margin-left: 10px;
     text-align: center;
 }
-.eachCat{
+
+.eachCat {
+    float: left;
+    margin: 30px;
+    width: 19vw;
+    height: 19vw;
+    min-height: 300px;
+    min-width: 300px;
 }
-.fav{
+
+.fav {
     border: none;
     background-color: transparent;
-    font-size: 40px;
-    position: absolute;
-    margin-top: 25px;
-    margin-left: -95px;
+    font-size: max(2vw, 40px);
+    position: relative;
+    left: 43%;
+    top: -18%;
 }
-.goToFav{
+
+.goToFav {
+    border: solid black 1px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    border-radius: 15px;
     position: absolute;
     top: 70px;
-    right: 10px ;
+    right: 10px;
 }

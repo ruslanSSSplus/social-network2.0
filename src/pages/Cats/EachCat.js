@@ -4,35 +4,28 @@ import {actions} from "../../redux/catsReducer";
 import {useDispatch} from "react-redux";
 
 
-
-
-
-
-const EachCat= (props) => {
+const EachCat = (props) => {
 
     const dispatch = useDispatch()
 
-    const addFav = (id) =>{
+    const addFav = (id) => {
         dispatch(actions.addFav(id))
     }
-    const deleteFav = (id) =>{
+    const deleteFav = (id) => {
         dispatch(actions.deleteFav(id))
     }
 
 
-    return  <span className={classes.eachCat}>
-          <img src={props.url} className={classes.cat} alt={'cat'}/>
+    return <div className={classes.eachCat}>
+        <img src={props.url} className={classes.cat} alt={'cat'}/>
         {
             !props.favorite.includes(props.cat) ?
-                <button className={classes.fav} onClick={() =>addFav(props.id)}>❤</button>
+                <button className={classes.fav} onClick={() => addFav(props.id)}>❤</button>
                 :
                 <button className={classes.fav} onClick={() => deleteFav(props.id)}>💔</button>
         }
 
-    </span>
-
-
-
+    </div>
 }
 
 export default EachCat;
