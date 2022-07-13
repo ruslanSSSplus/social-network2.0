@@ -23,6 +23,7 @@ import {TestContainer} from "../pages/Test/TestContainer";
 import DataPicker from "../pages/DataPicker/DatePicker";
 import FavCats from "../pages/Cats/FavCats";
 import {Cats} from "../pages/Cats/Cats";
+import Audio from "../pages/Audio/Audio";
 
 export const AllRoutes = () => {
 
@@ -67,6 +68,7 @@ export const AllRoutes = () => {
             <Route path='/DataPicker' render={() => <DataPicker />}/>
             <Route path='/Cats' render={() => <Cats />}/>
             <Route path='/FavoriteCats' render={() => <FavCats />}/>
+            <Route path='/Audio' render={() => <Audio />}/>
         </Switch>
     );
 }

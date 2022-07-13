@@ -129,6 +129,9 @@ class App extends React.Component<PropsType> {
                         <Menu.Item key="20" icon={<GithubOutlined />}>
                             <Link to='/Cats'>Cats</Link>
                         </Menu.Item>
+                        <Menu.Item key="21" icon={<GithubOutlined />}>
+                            <Link to='/Audio'>Audio</Link>
+                        </Menu.Item>
                         {!this.state.needWeather && <div className={classes.weather} onClick={() => {
                             this.setState({needWeather: true})
                         }}>

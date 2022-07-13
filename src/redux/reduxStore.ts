@@ -16,6 +16,7 @@ import booksReducer from './books'
 import animeReducer from "./animeReducer";
 import testReducer from "./testReducer";
 import catsReducer from "./catsReducer";
+import audioReducer from "./audioReducer";
 
 
 let rootReducer = combineReducers({
@@ -33,7 +34,8 @@ let rootReducer = combineReducers({
     anime: animeReducer,
     cats: catsReducer,
     test: testReducer,
-    maintest: mainTestReducer
+    maintest: mainTestReducer,
+    audio: audioReducer
 })
 
 type RootReducersType = typeof rootReducer
